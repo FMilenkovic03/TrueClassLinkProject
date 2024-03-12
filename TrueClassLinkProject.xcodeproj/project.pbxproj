@@ -11,6 +11,42 @@
 		C36BDABF2BA0886700E7EF19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDABE2BA0886700E7EF19 /* ContentView.swift */; };
 		C36BDAC12BA0886800E7EF19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BDAC02BA0886800E7EF19 /* Assets.xcassets */; };
 		C36BDAC42BA0886800E7EF19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BDAC32BA0886800E7EF19 /* Preview Assets.xcassets */; };
+		C36BDADB2BA0892F00E7EF19 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDACA2BA0892F00E7EF19 /* Classes.swift */; };
+		C36BDADC2BA0892F00E7EF19 /* Cours.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDACC2BA0892F00E7EF19 /* Cours.swift */; };
+		C36BDADD2BA0892F00E7EF19 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDACE2BA0892F00E7EF19 /* Question.swift */; };
+		C36BDADE2BA0892F00E7EF19 /* TestDiagnostique.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDACF2BA0892F00E7EF19 /* TestDiagnostique.swift */; };
+		C36BDADF2BA0892F00E7EF19 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDAD12BA0892F00E7EF19 /* Message.swift */; };
+		C36BDAE02BA0892F00E7EF19 /* MessageHistorique.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDAD22BA0892F00E7EF19 /* MessageHistorique.swift */; };
+		C36BDAE12BA0892F00E7EF19 /* Eleve.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDAD42BA0892F00E7EF19 /* Eleve.swift */; };
+		C36BDAE22BA0892F00E7EF19 /* EleveList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDAD52BA0892F00E7EF19 /* EleveList.swift */; };
+		C36BDAE32BA0892F00E7EF19 /* Prof.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDAD62BA0892F00E7EF19 /* Prof.swift */; };
+		C36BDAE42BA0892F00E7EF19 /* ProfList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDAD72BA0892F00E7EF19 /* ProfList.swift */; };
+		C36BDAE52BA0892F00E7EF19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDAD82BA0892F00E7EF19 /* User.swift */; };
+		C36BDB0E2BA08A2900E7EF19 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB0D2BA08A2900E7EF19 /* ReusableView.swift */; };
+		C36BDB102BA08A4D00E7EF19 /* DiagDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB0F2BA08A4D00E7EF19 /* DiagDescription.swift */; };
+		C36BDB122BA08A5900E7EF19 /* DiagMotivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB112BA08A5900E7EF19 /* DiagMotivation.swift */; };
+		C36BDB142BA08A6F00E7EF19 /* DiagExpectations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB132BA08A6F00E7EF19 /* DiagExpectations.swift */; };
+		C36BDB162BA08A8600E7EF19 /* DiagDifficulties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB152BA08A8600E7EF19 /* DiagDifficulties.swift */; };
+		C36BDB182BA08A9400E7EF19 /* DiagResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB172BA08A9400E7EF19 /* DiagResults.swift */; };
+		C36BDB1A2BA08AC300E7EF19 /* InscriptionConnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB192BA08AC300E7EF19 /* InscriptionConnexion.swift */; };
+		C36BDB1C2BA08AD300E7EF19 /* ProfessorStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB1B2BA08AD300E7EF19 /* ProfessorStudent.swift */; };
+		C36BDB1E2BA08AFE00E7EF19 /* Connexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB1D2BA08AFE00E7EF19 /* Connexion.swift */; };
+		C36BDB202BA08B0800E7EF19 /* Inscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB1F2BA08B0800E7EF19 /* Inscription.swift */; };
+		C36BDB262BA08B6300E7EF19 /* CourseChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB252BA08B6300E7EF19 /* CourseChoice.swift */; };
+		C36BDB282BA08B9200E7EF19 /* Tendances.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB272BA08B9200E7EF19 /* Tendances.swift */; };
+		C36BDB2A2BA08BAB00E7EF19 /* QuestionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB292BA08BAB00E7EF19 /* QuestionClass.swift */; };
+		C36BDB2C2BA08C5600E7EF19 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB2B2BA08C5600E7EF19 /* Profile.swift */; };
+		C36BDB2E2BA08C8000E7EF19 /* TendanceBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB2D2BA08C8000E7EF19 /* TendanceBoard.swift */; };
+		C36BDB302BA08C8C00E7EF19 /* TendanceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB2F2BA08C8C00E7EF19 /* TendanceClass.swift */; };
+		C36BDB322BA08C9D00E7EF19 /* TendanceSchool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB312BA08C9D00E7EF19 /* TendanceSchool.swift */; };
+		C36BDB342BA08CC100E7EF19 /* OccurentQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB332BA08CC100E7EF19 /* OccurentQuestion.swift */; };
+		C36BDB362BA08CCB00E7EF19 /* QuestionFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB352BA08CCB00E7EF19 /* QuestionFeedback.swift */; };
+		C36BDB382BA08CE300E7EF19 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB372BA08CE300E7EF19 /* ProfileView.swift */; };
+		C36BDB3A2BA08CEF00E7EF19 /* DiagnosticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB392BA08CEF00E7EF19 /* DiagnosticView.swift */; };
+		C36BDB3C2BA08CF900E7EF19 /* SendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB3B2BA08CF900E7EF19 /* SendMessage.swift */; };
+		C36BDB3E2BA08D2900E7EF19 /* RessourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB3D2BA08D2900E7EF19 /* RessourcesView.swift */; };
+		C36BDB402BA08D3600E7EF19 /* QuestionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */; };
+		C36BDB422BA08D4400E7EF19 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +55,42 @@
 		C36BDABE2BA0886700E7EF19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C36BDAC02BA0886800E7EF19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C36BDAC32BA0886800E7EF19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C36BDACA2BA0892F00E7EF19 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		C36BDACC2BA0892F00E7EF19 /* Cours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cours.swift; sourceTree = "<group>"; };
+		C36BDACE2BA0892F00E7EF19 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C36BDACF2BA0892F00E7EF19 /* TestDiagnostique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDiagnostique.swift; sourceTree = "<group>"; };
+		C36BDAD12BA0892F00E7EF19 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C36BDAD22BA0892F00E7EF19 /* MessageHistorique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHistorique.swift; sourceTree = "<group>"; };
+		C36BDAD42BA0892F00E7EF19 /* Eleve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eleve.swift; sourceTree = "<group>"; };
+		C36BDAD52BA0892F00E7EF19 /* EleveList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EleveList.swift; sourceTree = "<group>"; };
+		C36BDAD62BA0892F00E7EF19 /* Prof.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prof.swift; sourceTree = "<group>"; };
+		C36BDAD72BA0892F00E7EF19 /* ProfList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfList.swift; sourceTree = "<group>"; };
+		C36BDAD82BA0892F00E7EF19 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C36BDB0D2BA08A2900E7EF19 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		C36BDB0F2BA08A4D00E7EF19 /* DiagDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagDescription.swift; sourceTree = "<group>"; };
+		C36BDB112BA08A5900E7EF19 /* DiagMotivation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagMotivation.swift; sourceTree = "<group>"; };
+		C36BDB132BA08A6F00E7EF19 /* DiagExpectations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagExpectations.swift; sourceTree = "<group>"; };
+		C36BDB152BA08A8600E7EF19 /* DiagDifficulties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagDifficulties.swift; sourceTree = "<group>"; };
+		C36BDB172BA08A9400E7EF19 /* DiagResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagResults.swift; sourceTree = "<group>"; };
+		C36BDB192BA08AC300E7EF19 /* InscriptionConnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionConnexion.swift; sourceTree = "<group>"; };
+		C36BDB1B2BA08AD300E7EF19 /* ProfessorStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorStudent.swift; sourceTree = "<group>"; };
+		C36BDB1D2BA08AFE00E7EF19 /* Connexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connexion.swift; sourceTree = "<group>"; };
+		C36BDB1F2BA08B0800E7EF19 /* Inscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inscription.swift; sourceTree = "<group>"; };
+		C36BDB252BA08B6300E7EF19 /* CourseChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseChoice.swift; sourceTree = "<group>"; };
+		C36BDB272BA08B9200E7EF19 /* Tendances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tendances.swift; sourceTree = "<group>"; };
+		C36BDB292BA08BAB00E7EF19 /* QuestionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionClass.swift; sourceTree = "<group>"; };
+		C36BDB2B2BA08C5600E7EF19 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		C36BDB2D2BA08C8000E7EF19 /* TendanceBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendanceBoard.swift; sourceTree = "<group>"; };
+		C36BDB2F2BA08C8C00E7EF19 /* TendanceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendanceClass.swift; sourceTree = "<group>"; };
+		C36BDB312BA08C9D00E7EF19 /* TendanceSchool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TendanceSchool.swift; sourceTree = "<group>"; };
+		C36BDB332BA08CC100E7EF19 /* OccurentQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurentQuestion.swift; sourceTree = "<group>"; };
+		C36BDB352BA08CCB00E7EF19 /* QuestionFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFeedback.swift; sourceTree = "<group>"; };
+		C36BDB372BA08CE300E7EF19 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C36BDB392BA08CEF00E7EF19 /* DiagnosticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticView.swift; sourceTree = "<group>"; };
+		C36BDB3B2BA08CF900E7EF19 /* SendMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessage.swift; sourceTree = "<group>"; };
+		C36BDB3D2BA08D2900E7EF19 /* RessourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourcesView.swift; sourceTree = "<group>"; };
+		C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHistory.swift; sourceTree = "<group>"; };
+		C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +123,11 @@
 		C36BDABB2BA0886700E7EF19 /* TrueClassLinkProject */ = {
 			isa = PBXGroup;
 			children = (
+				C36BDB0C2BA089FB00E7EF19 /* Structures */,
+				C36BDB0B2BA089D900E7EF19 /* Diagnostic */,
+				C36BDB0A2BA089C900E7EF19 /* InscriptionConnexion */,
+				C36BDB092BA089BA00E7EF19 /* Dashboard */,
+				C36BDADA2BA0892F00E7EF19 /* Models */,
 				C36BDABC2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift */,
 				C36BDABE2BA0886700E7EF19 /* ContentView.swift */,
 				C36BDAC02BA0886800E7EF19 /* Assets.xcassets */,
@@ -65,6 +142,149 @@
 				C36BDAC32BA0886800E7EF19 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C36BDACB2BA0892F00E7EF19 /* Classe */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDACA2BA0892F00E7EF19 /* Classes.swift */,
+			);
+			path = Classe;
+			sourceTree = "<group>";
+		};
+		C36BDACD2BA0892F00E7EF19 /* Cours */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDACC2BA0892F00E7EF19 /* Cours.swift */,
+			);
+			path = Cours;
+			sourceTree = "<group>";
+		};
+		C36BDAD02BA0892F00E7EF19 /* Diagnostique */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDACE2BA0892F00E7EF19 /* Question.swift */,
+				C36BDACF2BA0892F00E7EF19 /* TestDiagnostique.swift */,
+			);
+			path = Diagnostique;
+			sourceTree = "<group>";
+		};
+		C36BDAD32BA0892F00E7EF19 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDAD12BA0892F00E7EF19 /* Message.swift */,
+				C36BDAD22BA0892F00E7EF19 /* MessageHistorique.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		C36BDAD92BA0892F00E7EF19 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDAD42BA0892F00E7EF19 /* Eleve.swift */,
+				C36BDAD52BA0892F00E7EF19 /* EleveList.swift */,
+				C36BDAD62BA0892F00E7EF19 /* Prof.swift */,
+				C36BDAD72BA0892F00E7EF19 /* ProfList.swift */,
+				C36BDAD82BA0892F00E7EF19 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C36BDADA2BA0892F00E7EF19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDACB2BA0892F00E7EF19 /* Classe */,
+				C36BDACD2BA0892F00E7EF19 /* Cours */,
+				C36BDAD02BA0892F00E7EF19 /* Diagnostique */,
+				C36BDAD32BA0892F00E7EF19 /* Message */,
+				C36BDAD92BA0892F00E7EF19 /* User */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C36BDB092BA089BA00E7EF19 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDB242BA08B3A00E7EF19 /* TendanceChild */,
+				C36BDB232BA08B3100E7EF19 /* QuestionChild */,
+				C36BDB222BA08B2800E7EF19 /* ProfileChild */,
+				C36BDB212BA08B1A00E7EF19 /* CourseChoiceChild */,
+				C36BDB252BA08B6300E7EF19 /* CourseChoice.swift */,
+				C36BDB272BA08B9200E7EF19 /* Tendances.swift */,
+				C36BDB292BA08BAB00E7EF19 /* QuestionClass.swift */,
+				C36BDB2B2BA08C5600E7EF19 /* Profile.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		C36BDB0A2BA089C900E7EF19 /* InscriptionConnexion */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDB192BA08AC300E7EF19 /* InscriptionConnexion.swift */,
+				C36BDB1B2BA08AD300E7EF19 /* ProfessorStudent.swift */,
+				C36BDB1D2BA08AFE00E7EF19 /* Connexion.swift */,
+				C36BDB1F2BA08B0800E7EF19 /* Inscription.swift */,
+			);
+			path = InscriptionConnexion;
+			sourceTree = "<group>";
+		};
+		C36BDB0B2BA089D900E7EF19 /* Diagnostic */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDB0F2BA08A4D00E7EF19 /* DiagDescription.swift */,
+				C36BDB112BA08A5900E7EF19 /* DiagMotivation.swift */,
+				C36BDB132BA08A6F00E7EF19 /* DiagExpectations.swift */,
+				C36BDB152BA08A8600E7EF19 /* DiagDifficulties.swift */,
+				C36BDB172BA08A9400E7EF19 /* DiagResults.swift */,
+			);
+			path = Diagnostic;
+			sourceTree = "<group>";
+		};
+		C36BDB0C2BA089FB00E7EF19 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDB0D2BA08A2900E7EF19 /* ReusableView.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		C36BDB212BA08B1A00E7EF19 /* CourseChoiceChild */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDB3D2BA08D2900E7EF19 /* RessourcesView.swift */,
+				C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */,
+				C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */,
+			);
+			path = CourseChoiceChild;
+			sourceTree = "<group>";
+		};
+		C36BDB222BA08B2800E7EF19 /* ProfileChild */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDB372BA08CE300E7EF19 /* ProfileView.swift */,
+				C36BDB392BA08CEF00E7EF19 /* DiagnosticView.swift */,
+				C36BDB3B2BA08CF900E7EF19 /* SendMessage.swift */,
+			);
+			path = ProfileChild;
+			sourceTree = "<group>";
+		};
+		C36BDB232BA08B3100E7EF19 /* QuestionChild */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDB332BA08CC100E7EF19 /* OccurentQuestion.swift */,
+				C36BDB352BA08CCB00E7EF19 /* QuestionFeedback.swift */,
+			);
+			path = QuestionChild;
+			sourceTree = "<group>";
+		};
+		C36BDB242BA08B3A00E7EF19 /* TendanceChild */ = {
+			isa = PBXGroup;
+			children = (
+				C36BDB2D2BA08C8000E7EF19 /* TendanceBoard.swift */,
+				C36BDB2F2BA08C8C00E7EF19 /* TendanceClass.swift */,
+				C36BDB312BA08C9D00E7EF19 /* TendanceSchool.swift */,
+			);
+			path = TendanceChild;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +357,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36BDB3E2BA08D2900E7EF19 /* RessourcesView.swift in Sources */,
+				C36BDAE52BA0892F00E7EF19 /* User.swift in Sources */,
+				C36BDB262BA08B6300E7EF19 /* CourseChoice.swift in Sources */,
+				C36BDB182BA08A9400E7EF19 /* DiagResults.swift in Sources */,
+				C36BDB102BA08A4D00E7EF19 /* DiagDescription.swift in Sources */,
+				C36BDADD2BA0892F00E7EF19 /* Question.swift in Sources */,
+				C36BDB302BA08C8C00E7EF19 /* TendanceClass.swift in Sources */,
+				C36BDB3C2BA08CF900E7EF19 /* SendMessage.swift in Sources */,
+				C36BDB1C2BA08AD300E7EF19 /* ProfessorStudent.swift in Sources */,
+				C36BDB1A2BA08AC300E7EF19 /* InscriptionConnexion.swift in Sources */,
+				C36BDB142BA08A6F00E7EF19 /* DiagExpectations.swift in Sources */,
 				C36BDABF2BA0886700E7EF19 /* ContentView.swift in Sources */,
+				C36BDAE12BA0892F00E7EF19 /* Eleve.swift in Sources */,
+				C36BDB342BA08CC100E7EF19 /* OccurentQuestion.swift in Sources */,
+				C36BDB1E2BA08AFE00E7EF19 /* Connexion.swift in Sources */,
 				C36BDABD2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift in Sources */,
+				C36BDB362BA08CCB00E7EF19 /* QuestionFeedback.swift in Sources */,
+				C36BDB0E2BA08A2900E7EF19 /* ReusableView.swift in Sources */,
+				C36BDADC2BA0892F00E7EF19 /* Cours.swift in Sources */,
+				C36BDB162BA08A8600E7EF19 /* DiagDifficulties.swift in Sources */,
+				C36BDAE32BA0892F00E7EF19 /* Prof.swift in Sources */,
+				C36BDAE22BA0892F00E7EF19 /* EleveList.swift in Sources */,
+				C36BDAE02BA0892F00E7EF19 /* MessageHistorique.swift in Sources */,
+				C36BDAE42BA0892F00E7EF19 /* ProfList.swift in Sources */,
+				C36BDB402BA08D3600E7EF19 /* QuestionHistory.swift in Sources */,
+				C36BDADE2BA0892F00E7EF19 /* TestDiagnostique.swift in Sources */,
+				C36BDB322BA08C9D00E7EF19 /* TendanceSchool.swift in Sources */,
+				C36BDB2E2BA08C8000E7EF19 /* TendanceBoard.swift in Sources */,
+				C36BDADB2BA0892F00E7EF19 /* Classes.swift in Sources */,
+				C36BDB2A2BA08BAB00E7EF19 /* QuestionClass.swift in Sources */,
+				C36BDB282BA08B9200E7EF19 /* Tendances.swift in Sources */,
+				C36BDB202BA08B0800E7EF19 /* Inscription.swift in Sources */,
+				C36BDB122BA08A5900E7EF19 /* DiagMotivation.swift in Sources */,
+				C36BDB2C2BA08C5600E7EF19 /* Profile.swift in Sources */,
+				C36BDB382BA08CE300E7EF19 /* ProfileView.swift in Sources */,
+				C36BDADF2BA0892F00E7EF19 /* Message.swift in Sources */,
+				C36BDB3A2BA08CEF00E7EF19 /* DiagnosticView.swift in Sources */,
+				C36BDB422BA08D4400E7EF19 /* QuestionAnswer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
