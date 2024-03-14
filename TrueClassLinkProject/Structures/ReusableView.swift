@@ -1,25 +1,42 @@
 import SwiftUI
 
 /// A custom button view.
+// CustomButton.swift
+
 struct CustomButton<Destination: View>: View {
     let text: String
     let width: CGFloat
     let height: CGFloat
     let cornerRadius: CGFloat
     let destination: Destination
+
+    var body: some View {
+        NavigationLink(destination: destination){
+            Text(text)
+                .foregroundColor(.white)
+                .font(.headline)
+                .frame(width: width, height: height)
+                .background(.orangeEdu)
+                .cornerRadius(cornerRadius)
+        }
+    }
+}
+
+struct CustomButton2: View {
+    let text: String
+    let width: CGFloat
+    let height: CGFloat
+    let cornerRadius: CGFloat
+    let action: () -> Void
     
     var body: some View {
-        NavigationLink(destination: destination) {
-            Button {
-                // Action to perform when the button is tapped
-            } label: {
-                Text(text)
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .frame(width: width, height: height)
-                    .background(Color.orangeEdu)
-                    .cornerRadius(cornerRadius)
-            }
+        Button(action: action) {
+            Text(text)
+                .foregroundColor(.white)
+                .font(.headline)
+                .frame(width: width, height: height)
+                .background(Color.orangeEdu)
+                .cornerRadius(cornerRadius)
         }
     }
 }
@@ -208,8 +225,8 @@ struct ReusableView: View {
     var body: some View {
         NavigationStack{
             VStack(spacing: 20) {
-                CustomButton(text: "Inscription", width: 200, height: 50, cornerRadius: 30, destination: ReusableView())
-                CustomButton(text: "Connexion", width: 200, height: 50, cornerRadius: 30, destination: ReusableView())
+                CustomButton(text: "Connexion", width: 350, height: 50, cornerRadius: 30, destination: ReusableView())
+               
                 OrangeBigButton(text: "Histoire", imageButton: Image("vector"))
                 NonFilledOrangeButton(text: "Historique", imageButton: Image(systemName: "star"))
                 ButtonAnswer(question: "la question", answer: "la réponse")
