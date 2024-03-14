@@ -9,7 +9,28 @@ import SwiftUI
 
 struct ProfessorStudent: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            
+            Image("connexionBackground")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            VStack{
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250)
+                Text("ClassLink")
+                    .foregroundStyle(.purpleEdu)
+                    .font(.title)
+                    .bold()
+                Spacer()
+                    .frame(height: 50)
+                CustomButton(text: "Professeur", width: 30, height: 50, cornerRadius: 5, destination: Inscription())
+                    .padding()
+                CustomButton(text: "Elève", width: 30, height: 50, cornerRadius: 5, destination: Inscription())
+            }
+        }
     }
 }
 

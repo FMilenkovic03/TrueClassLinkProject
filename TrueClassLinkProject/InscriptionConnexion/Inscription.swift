@@ -8,11 +8,198 @@
 import SwiftUI
 
 struct Inscription: View {
-    var body: some View {
-        Text("Hello, World!")
-    }
-}
+    
+    @State private var name: String = ""
+    @State private var surname: String = ""
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var selectedClass: Classes?
+    @State private var selectedClassIndex = 0
+    let eleveList = EleveList()
+    @State private var isModalVisible = false
+    @State private var navigateToConnexion = false
+    @State private var fillAllFieldsError = false
+    
+    func saveAction() {
+           guard let classe = selectedClass else { return }
+        
+        if name.isEmpty || surname.isEmpty || email.isEmpty || password.isEmpty || classe == nil {
+                  fillAllFieldsError = true
+                  return
+              }
+        
+           if eleveList.userExists(email: email) {
+               emailExistsError = true
+           } else {
+               if let newEleve = eleveList.creerEleve(email: email, mdp: password, name: name, prenom: surname, classe: classe) {
+                   navigateToConnexion = true
+               }
+           }
+       }
+   
+    @ObservedObject var listeClasses = ListeClasses()
+       
+       init() {
+           self.listeClasses = listeClasses
+           self.listeClasses.addClass(className: "2nd1")
+           self.listeClasses.addClass(className: "2nd2")
+           self.listeClasses.addClass(className: "2nd3")
+           self.listeClasses.addClass(className: "1er1")
+           self.listeClasses.addClass(className: "1er2")
+           self.listeClasses.addClass(className: "1er3")
+           self.listeClasses.addClass(className: "Ter1")
+           self.listeClasses.addClass(className: "Ter2")
+           self.listeClasses.addClass(className: "Ter3")
+       }
+    
+       
+       var arrayTitle: [String] = ["Nom", "Prenom", "Mail", "Mot de passe"]
+        @State private var emailExistsError = false
+       
+       var body: some View {
+           NavigationStack{
+               ZStack{
+                   Image("backgroundBase")
+                       .resizable()
+                       .ignoresSafeArea()
+                   VStack {
+                       ForEach(arrayTitle, id: \.self){ title in
+                           TextFieldView(text: textForTitle(title), title: title)
+                           
+                       }
+                       
+                       Button(action: {
+                           isModalVisible.toggle()
+                       }) {
+                           Text(selectedClass?.name ?? "Classe")
+                               .foregroundColor(selectedClass != nil ? .black : .gray)
+                               .padding(.trailing, 270)
+                               .padding(.bottom, 5)
+                               .overlay(
+                                Rectangle()
+                                    .frame(width: 340, height: 1)
+                                    .padding(.horizontal)
+                                    .foregroundColor(.greyEdu), // Change the color as needed
+                                alignment: .bottom
+                               )
+                       }
+                       .sheet(isPresented: $isModalVisible) {
+                           ModalPicker(selectedClassIndex: $selectedClassIndex, listeClasses: listeClasses, selectedClass: $selectedClass)                             }
+                       .foregroundStyle(.greyEdu)
+                       
+                       //Spacer()
+                       
+                       .padding()
+                       
+                       Button(action: {
+                           
+                           saveAction()
+                       }, label: {
+                           Text("Enregistrer")
+                               .foregroundColor(.white)
+                               .font(.headline)
+                               .frame(width: 200, height: 50)
+                               .background(.orange)
+                               .cornerRadius(30)
+                       })
+                       
+                       if fillAllFieldsError {
+                                               Text("Veuillez remplir tous les champs.")
+                                                   .foregroundColor(.red)
+                                                   .padding()
+                                           }
+                       
+                       else if emailExistsError {
+                           Text("L'adresse e-mail existe déjà dans la base.")
+                               .foregroundColor(.red)
+                               .padding()
+                       }
+                       
+                   }
+               }
+               .navigationTitle("Inscription")
+               .navigationBarHidden(navigateToConnexion) // Masquer la barre de navigation si nous naviguons vers la page de connexion
+                           .background(
+                               NavigationLink(
+                                   destination: Connexion(), // Remplacez Connexion par le nom de votre vue de connexion
+                                   isActive: $navigateToConnexion,
+                                   label: {
+                                       EmptyView()
+                                   })
+                           )
+                           .onAppear {
+                               emailExistsError = false
+                               fillAllFieldsError = false
+                            }
+           }
+       }
+       
+       func textForTitle(_ title: String) -> Binding<String> {
+           switch title {
+           case "Nom":
+               return $name
+           case "Prenom":
+               return $surname
+           case "Mail":
+               return $email
+           case "Mot de passe":
+               return $password
+           default:
+               return .constant("") // Default binding
+           }
+       }
+   }
+
+
 
 #Preview {
     Inscription()
 }
+
+struct ModalPicker: View {
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var selectedClassIndex: Int
+    var listeClasses: ListeClasses
+    @Binding var selectedClass: Classes?
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                Picker(selection: $selectedClassIndex, label: Text("")) {
+                    ForEach(0..<listeClasses.classes.count) { index in
+                        Text(self.listeClasses.classes[index].name).tag(index)
+                    }
+                }
+                
+                .pickerStyle(WheelPickerStyle())
+                .padding()
+            }
+            .navigationBarTitle("Choisir une classe")
+            .navigationBarItems(trailing: Button("Fermer") {
+                selectedClass = listeClasses.classes[selectedClassIndex]
+                presentationMode.wrappedValue.dismiss()
+            })
+        }
+    }
+}
+
+
+//struct TextFieldView: View {
+//    @Binding var text: String
+//    var title: String
+//    var body: some View {
+//        VStack{
+//            TextField(title, text: $text)
+//                .padding(.horizontal)
+//                .padding(.bottom, 8)
+//                .overlay(
+//                    Rectangle()
+//                        .frame(height: 1)
+//                        .padding(.horizontal)
+//                        .foregroundColor(.gray),
+//                    alignment: .bottom
+//                )
+//        }
+//        .padding()
+//    }
+//}

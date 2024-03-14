@@ -47,7 +47,7 @@ class User: ObservableObject {
     @Published var email: String
     @Published var mdp: String
     @Published var name: String
-    @Published var surname: String
+    @Published var prenom: String
     @Published var hobby: [Loisirs]?
     @Published var mood: Mood?
     @Published var profilePicture: String?
@@ -58,7 +58,7 @@ class User: ObservableObject {
         self.email = email
         self.mdp = mdp
         self.name = name
-        self.surname = prenom
+        self.prenom = prenom
         self.hobby = []
     }
     
