@@ -7,15 +7,22 @@
 
 import Foundation
 
+
 class Classes: ObservableObject {
-    
+
     @Published var name: String
-    
-    
+
     init(name: String) {
         self.name = name
     }
-    
-    
-    
+}
+
+class ListeClasses: ObservableObject {
+
+    @Published var classes: [Classes] = []
+
+    func addClass(className: String) {
+        let newClass = Classes(name: className)
+        classes.append(newClass)
+    }
 }

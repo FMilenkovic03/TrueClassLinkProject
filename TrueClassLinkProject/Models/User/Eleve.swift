@@ -7,23 +7,35 @@
 
 import Foundation
 
+// liste des disciplines
+
 enum PointsForts {
-    case travailEquipe, apprendreVite
+    case travailEquipe (name: String) // "Travail en équipe"
+    case apprendreVite (name: String) // "Apprend vite"
+    case collaboration (name: String) // "Collaboration"
+    case confianceEnSoi (name: String) // "Confiance en soi"
+    case motivation (name: String) // "Motivé.e"
+    case sociable (name: String) // "Sociable"
+    case bonneOrganisation (name: String) // "Bonne organisation"
 }
-enum pointsFaible{
-    case despersion, organisation
+enum PointsFaibles {
+    case depression (name: String) // "Dépression"
+    case mauvaiseOrganisation (name: String) // "Difficultés à s'organiser"
+    case environnementDifficile (name: String) // "Environnement difficile"
+    case handicapPhy (name: String) // "Handicap Physique"
+    case handicapPsy (name: String) // "Handicap Psychique"
+    case harcellement (name: String) // "Harcellé.e"
+    case manqueConfiance (name: String) // "Manque de confiance"
 }
 
 class Eleve: User {
     
     var classe: Classes
     var pointsForts: [PointsForts]?
-    var pointsFaibles: [pointsFaible]?
+    var pointsFaibles: [PointsFaibles]?
     
     init(email: String, mdp: String, name: String, prenom: String, classe: Classes) {
         self.classe = classe
-//        self.pointsForts = pointsForts
-//        self.pointsFaibles = pointsFaibles
         super.init(email: email, mdp: mdp, name: name, prenom: prenom)
     }
     

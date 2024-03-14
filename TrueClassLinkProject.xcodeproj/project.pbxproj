@@ -47,6 +47,7 @@
 		C36BDB3E2BA08D2900E7EF19 /* RessourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB3D2BA08D2900E7EF19 /* RessourcesView.swift */; };
 		C36BDB402BA08D3600E7EF19 /* QuestionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */; };
 		C36BDB422BA08D4400E7EF19 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */; };
+		C3BCAE4B2BA2F557002DC5D0 /* UsersProfiles_Added.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCAE4A2BA2F557002DC5D0 /* UsersProfiles_Added.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		C36BDB3D2BA08D2900E7EF19 /* RessourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourcesView.swift; sourceTree = "<group>"; };
 		C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHistory.swift; sourceTree = "<group>"; };
 		C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
+		C3BCAE4A2BA2F557002DC5D0 /* UsersProfiles_Added.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersProfiles_Added.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		C36BDAD92BA0892F00E7EF19 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				C3BCAE4A2BA2F557002DC5D0 /* UsersProfiles_Added.swift */,
 				C36BDAD42BA0892F00E7EF19 /* Eleve.swift */,
 				C36BDAD52BA0892F00E7EF19 /* EleveList.swift */,
 				C36BDAD62BA0892F00E7EF19 /* Prof.swift */,
@@ -383,6 +386,7 @@
 				C36BDAE42BA0892F00E7EF19 /* ProfList.swift in Sources */,
 				C36BDB402BA08D3600E7EF19 /* QuestionHistory.swift in Sources */,
 				C36BDADE2BA0892F00E7EF19 /* TestDiagnostique.swift in Sources */,
+				C3BCAE4B2BA2F557002DC5D0 /* UsersProfiles_Added.swift in Sources */,
 				C36BDB322BA08C9D00E7EF19 /* TendanceSchool.swift in Sources */,
 				C36BDB2E2BA08C8000E7EF19 /* TendanceBoard.swift in Sources */,
 				C36BDADB2BA0892F00E7EF19 /* Classes.swift in Sources */,

@@ -1,21 +1,25 @@
 import SwiftUI
 
 /// A custom button view.
-struct CustomButton: View {
+struct CustomButton<Destination: View>: View {
     let text: String
     let width: CGFloat
     let height: CGFloat
     let cornerRadius: CGFloat
+    let destination: Destination
     
     var body: some View {
-        Button(action: {
-        }) {
-            Text(text)
-                .foregroundColor(.white)
-                .font(.headline)
-                .frame(width: 200, height: 50)
-                .background(.orangeEdu)
-                .cornerRadius(30)
+        NavigationLink(destination: destination) {
+            Button {
+                // Action to perform when the button is tapped
+            } label: {
+                Text(text)
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .frame(width: width, height: height)
+                    .background(Color.orangeEdu)
+                    .cornerRadius(cornerRadius)
+            }
         }
     }
 }
@@ -24,17 +28,14 @@ struct CustomButton: View {
 struct tabViewBar: View {
     var body: some View {
         TabView {
-            Text("Home")
-                .tabItem {
-                    Label("Home", systemImage: "house")
-            }
-            Text("Alerts")
-                .tabItem {
-                    Label("Alerts", systemImage: "bell")
-            }
-            Text("Settings")
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
+            CourseChoice()
+                .tabItem {Label("Accueil", systemImage: "house")}
+            QuestionClass()
+                .tabItem {Label("Questions", systemImage: "bell")}
+            Profile()
+                .tabItem {Label("Profile", systemImage: "gear")
+            Tendances()
+                .tabItem { Label("Tendances", systemImage: "flame") }
             }
         }
     }
@@ -96,7 +97,7 @@ struct NonFilledOrangeButton: View {
                 
                 HStack {
                     Text(text)
-                        .foregroundColor(.orange)
+                        .foregroundColor(.orangeEdu)
                         .padding(.leading, 8)
                     imageButton
                         .resizable()
@@ -160,17 +161,60 @@ struct RectangularTogglableButton: View {
     }
 }
 
+//textfields for writing in it
+struct TextFieldView: View {
+    @Binding var text: String
+    var title: String
+    var body: some View {
+        VStack{
+            TextField(title, text: $text)
+                .padding(.horizontal)
+                .padding(.bottom, 8)
+                .overlay(
+                    Rectangle()
+                        .frame(height: 1)
+                        .padding(.horizontal)
+                        .foregroundColor(.gray),
+                    alignment: .bottom
+                )
+        }
+        .padding()
+    }
+}
+
+struct SecureFieldView: View {
+    @Binding var text: String
+    var title: String
+    var body: some View {
+        VStack{
+            SecureField(title, text: $text)
+                .padding(.horizontal)
+                .padding(.bottom, 8)
+                .overlay(
+                    Rectangle()
+                        .frame(height: 1)
+                        .padding(.horizontal)
+                        .foregroundColor(.gray),
+                    alignment: .bottom
+                )
+        }
+        .padding()
+    }
+}
+
 /// The main content view.
 
 struct ReusableView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            CustomButton(text: "Inscription", width: 200, height: 50, cornerRadius: 30)
-            CustomButton(text: "Connexion", width: 200, height: 50, cornerRadius: 30)
-            OrangeBigButton(text: "Histoire", imageButton: Image("vector"))
-            NonFilledOrangeButton(text: "Historique", imageButton: Image(systemName: "star"))
-            ButtonAnswer(question: "la question", answer: "la réponse")
-            RectangularTogglableButton(buttonText: "lol")
+        NavigationStack{
+            VStack(spacing: 20) {
+                CustomButton(text: "Inscription", width: 200, height: 50, cornerRadius: 30, destination: ReusableView())
+                CustomButton(text: "Connexion", width: 200, height: 50, cornerRadius: 30, destination: ReusableView())
+                OrangeBigButton(text: "Histoire", imageButton: Image("vector"))
+                NonFilledOrangeButton(text: "Historique", imageButton: Image(systemName: "star"))
+                ButtonAnswer(question: "la question", answer: "la réponse")
+                RectangularTogglableButton(buttonText: "lol")
+            }
         }
     }
 }
