@@ -109,7 +109,7 @@ struct NonFilledOrangeButton: View {
         }) {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.orange, lineWidth: 2)
+                    .stroke(Color.orangeEdu, lineWidth: 2)
                     .frame(width: 285,height: 85)
                 
                 HStack {
@@ -191,7 +191,7 @@ struct TextFieldView: View {
                     Rectangle()
                         .frame(height: 1)
                         .padding(.horizontal)
-                        .foregroundColor(.gray),
+                        .foregroundColor(.greyEdu),
                     alignment: .bottom
                 )
         }
@@ -211,7 +211,7 @@ struct SecureFieldView: View {
                     Rectangle()
                         .frame(height: 1)
                         .padding(.horizontal)
-                        .foregroundColor(.gray),
+                        .foregroundColor(.greyEdu),
                     alignment: .bottom
                 )
         }
