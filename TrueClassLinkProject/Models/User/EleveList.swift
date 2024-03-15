@@ -17,18 +17,18 @@ class EleveList{
     }
     
     
-    func creerEleve(email: String, mdp: String, name: String, prenom: String, classe: Classes) -> Eleve? {
-        if email.isEmpty || mdp.isEmpty || name.isEmpty || prenom.isEmpty || classe.name.isEmpty {
+    func creerEleve(email: String, mdp: String, name: String, surname: String, classe: Classes) -> Eleve? {
+        if email.isEmpty || mdp.isEmpty || name.isEmpty || surname.isEmpty || classe.name.isEmpty {
             print("Veuillez remplir tous les champs.")
             return nil
         } else {
-            let newEleve = Eleve(email: email, mdp: mdp, name: name, prenom: prenom, classe: classe)
+            let newEleve = Eleve(email: email, mdp: mdp, name: name, surname: surname, classe: classe)
             addEleve(eleve: newEleve)
             print(listeEleve)
             print(newEleve.name)
             print(newEleve.mdp)
             print(newEleve.email)
-           print(newEleve.prenom)
+           print(newEleve.surname)
             print(newEleve.classe.name)
             return newEleve
             
@@ -38,8 +38,7 @@ class EleveList{
             
     }
     
-    
-    func userExists(email: String) -> Bool {
+    func eleveExists(email: String) -> Bool {
         return listeEleve.contains(where: { $0.email == email })
     }
 

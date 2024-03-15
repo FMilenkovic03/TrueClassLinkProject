@@ -20,25 +20,22 @@ struct Inscription: View {
     @State private var navigateToConnexion = false
     @State private var fillAllFieldsError = false
     
- func saveAction() {
-    guard let classe = selectedClass else { 
-        fillAllFieldsError = true
-        return 
-    }
-    
-    if name.isEmpty || surname.isEmpty || email.isEmpty || password.isEmpty {
-        fillAllFieldsError = true
-        return
-    }
-    
-    if eleveList.userExists(email: email) {
-        emailExistsError = true
-    } else {
-        if eleveList.creerEleve(email: email, mdp: password, name: name, prenom: surname, classe: classe) != nil {
-            navigateToConnexion = true
-        }
-    }
-}
+    func saveAction() {
+           guard let classe = selectedClass else { return }
+        
+        if name.isEmpty || surname.isEmpty || email.isEmpty || password.isEmpty || classe == nil {
+                  fillAllFieldsError = true
+                  return
+              }
+        
+           if eleveList.eleveExists(email: email) {
+               emailExistsError = true
+           } else {
+               if let newEleve = eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) {
+                   navigateToConnexion = true
+               }
+           }
+       }
    
     @ObservedObject var listeClasses = ListeClasses()
        
@@ -82,13 +79,12 @@ struct Inscription: View {
                                 Rectangle()
                                     .frame(width: 340, height: 1)
                                     .padding(.horizontal)
-                                    .foregroundColor(.greyEdu), // Change the color as needed
+                                    .foregroundColor(.gray), // Change the color as needed
                                 alignment: .bottom
                                )
                        }
                        .sheet(isPresented: $isModalVisible) {
                            ModalPicker(selectedClassIndex: $selectedClassIndex, listeClasses: listeClasses, selectedClass: $selectedClass)                             }
-                       .foregroundStyle(.greyEdu)
                        
                        //Spacer()
                        
@@ -122,14 +118,14 @@ struct Inscription: View {
                }
                .navigationTitle("Inscription")
                .navigationBarHidden(navigateToConnexion) // Masquer la barre de navigation si nous naviguons vers la page de connexion
-                .background(
-                    NavigationLink(
-                        destination: Connexion(),
-                        isActive: $navigateToConnexion,
-                        label: {
-                            EmptyView()
-                        })
-                )
+                           .background(
+                               NavigationLink(
+                                   destination: Connexion(), // Remplacez Connexion par le nom de votre vue de connexion
+                                   isActive: $navigateToConnexion,
+                                   label: {
+                                       EmptyView()
+                                   })
+                           )
                            .onAppear {
                                emailExistsError = false
                                fillAllFieldsError = false
@@ -169,7 +165,7 @@ struct ModalPicker: View {
         NavigationView {
             VStack {
                 Picker(selection: $selectedClassIndex, label: Text("")) {
-                    ForEach(listeClasses.classes.indices, id: \.self) { index in
+                    ForEach(0..<listeClasses.classes.count) { index in
                         Text(self.listeClasses.classes[index].name).tag(index)
                     }
                 }
@@ -185,24 +181,3 @@ struct ModalPicker: View {
         }
     }
 }
-
-
-//struct TextFieldView: View {
-//    @Binding var text: String
-//    var title: String
-//    var body: some View {
-//        VStack{
-//            TextField(title, text: $text)
-//                .padding(.horizontal)
-//                .padding(.bottom, 8)
-//                .overlay(
-//                    Rectangle()
-//                        .frame(height: 1)
-//                        .padding(.horizontal)
-//                        .foregroundColor(.gray),
-//                    alignment: .bottom
-//                )
-//        }
-//        .padding()
-//    }
-//}

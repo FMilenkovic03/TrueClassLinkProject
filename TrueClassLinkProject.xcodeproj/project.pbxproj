@@ -48,6 +48,26 @@
 		C36BDB402BA08D3600E7EF19 /* QuestionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */; };
 		C36BDB422BA08D4400E7EF19 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */; };
 		C3BCAE4B2BA2F557002DC5D0 /* UsersProfiles_Added.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCAE4A2BA2F557002DC5D0 /* UsersProfiles_Added.swift */; };
+		C3D54F062BA48B4F005EFE18 /* AddedHobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F052BA48B4F005EFE18 /* AddedHobbyView.swift */; };
+		C3D54F082BA49C06005EFE18 /* AnglaisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F072BA49C06005EFE18 /* AnglaisView.swift */; };
+		C3D54F0A2BA49C0D005EFE18 /* MathsQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F092BA49C0D005EFE18 /* MathsQA.swift */; };
+		C3D54F0C2BA49C17005EFE18 /* FrenchQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F0B2BA49C16005EFE18 /* FrenchQA.swift */; };
+		C3D54F0E2BA49C1F005EFE18 /* EnglishVid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F0D2BA49C1F005EFE18 /* EnglishVid.swift */; };
+		C3D54F102BA49C3D005EFE18 /* EnglishRess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F0F2BA49C3D005EFE18 /* EnglishRess.swift */; };
+		C3D54F122BA49C44005EFE18 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F112BA49C44005EFE18 /* WebView.swift */; };
+		C3D54F142BA49C4A005EFE18 /* EnglishArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F132BA49C4A005EFE18 /* EnglishArticles.swift */; };
+		C3D54F162BA49C52005EFE18 /* MathsExo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F152BA49C52005EFE18 /* MathsExo.swift */; };
+		C3D54F182BA49C61005EFE18 /* CoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F172BA49C61005EFE18 /* CoursView.swift */; };
+		C3D54F1A2BA49C67005EFE18 /* LitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F192BA49C67005EFE18 /* LitView.swift */; };
+		C3D54F1C2BA49C6D005EFE18 /* MathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F1B2BA49C6D005EFE18 /* MathsView.swift */; };
+		C3D54F1E2BA49C73005EFE18 /* MathsRess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F1D2BA49C73005EFE18 /* MathsRess.swift */; };
+		C3D54F202BA49C78005EFE18 /* EnglishQA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D54F1F2BA49C78005EFE18 /* EnglishQA.swift */; };
+		C3E1B95C2BA48A0F00140747 /* DMButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B9552BA48A0F00140747 /* DMButtonView.swift */; };
+		C3E1B95D2BA48A0F00140747 /* HobbiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B9562BA48A0F00140747 /* HobbiesListView.swift */; };
+		C3E1B95E2BA48A0F00140747 /* ProfileEditButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B9572BA48A0F00140747 /* ProfileEditButtonView.swift */; };
+		C3E1B95F2BA48A0F00140747 /* ProfileInfosRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B9582BA48A0F00140747 /* ProfileInfosRectangleView.swift */; };
+		C3E1B9602BA48A0F00140747 /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B9592BA48A0F00140747 /* ProfilePictureView.swift */; };
+		C3E1B9612BA48A0F00140747 /* ProfileTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B95A2BA48A0F00140747 /* ProfileTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +113,26 @@
 		C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHistory.swift; sourceTree = "<group>"; };
 		C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
 		C3BCAE4A2BA2F557002DC5D0 /* UsersProfiles_Added.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersProfiles_Added.swift; sourceTree = "<group>"; };
+		C3D54F052BA48B4F005EFE18 /* AddedHobbyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddedHobbyView.swift; sourceTree = "<group>"; };
+		C3D54F072BA49C06005EFE18 /* AnglaisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnglaisView.swift; sourceTree = "<group>"; };
+		C3D54F092BA49C0D005EFE18 /* MathsQA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathsQA.swift; sourceTree = "<group>"; };
+		C3D54F0B2BA49C16005EFE18 /* FrenchQA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchQA.swift; sourceTree = "<group>"; };
+		C3D54F0D2BA49C1F005EFE18 /* EnglishVid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishVid.swift; sourceTree = "<group>"; };
+		C3D54F0F2BA49C3D005EFE18 /* EnglishRess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishRess.swift; sourceTree = "<group>"; };
+		C3D54F112BA49C44005EFE18 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C3D54F132BA49C4A005EFE18 /* EnglishArticles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishArticles.swift; sourceTree = "<group>"; };
+		C3D54F152BA49C52005EFE18 /* MathsExo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathsExo.swift; sourceTree = "<group>"; };
+		C3D54F172BA49C61005EFE18 /* CoursView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursView.swift; sourceTree = "<group>"; };
+		C3D54F192BA49C67005EFE18 /* LitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LitView.swift; sourceTree = "<group>"; };
+		C3D54F1B2BA49C6D005EFE18 /* MathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathsView.swift; sourceTree = "<group>"; };
+		C3D54F1D2BA49C73005EFE18 /* MathsRess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathsRess.swift; sourceTree = "<group>"; };
+		C3D54F1F2BA49C78005EFE18 /* EnglishQA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishQA.swift; sourceTree = "<group>"; };
+		C3E1B9552BA48A0F00140747 /* DMButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMButtonView.swift; sourceTree = "<group>"; };
+		C3E1B9562BA48A0F00140747 /* HobbiesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbiesListView.swift; sourceTree = "<group>"; };
+		C3E1B9572BA48A0F00140747 /* ProfileEditButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditButtonView.swift; sourceTree = "<group>"; };
+		C3E1B9582BA48A0F00140747 /* ProfileInfosRectangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInfosRectangleView.swift; sourceTree = "<group>"; };
+		C3E1B9592BA48A0F00140747 /* ProfilePictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
+		C3E1B95A2BA48A0F00140747 /* ProfileTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +294,19 @@
 		C36BDB212BA08B1A00E7EF19 /* CourseChoiceChild */ = {
 			isa = PBXGroup;
 			children = (
+				C3D54F1F2BA49C78005EFE18 /* EnglishQA.swift */,
+				C3D54F1D2BA49C73005EFE18 /* MathsRess.swift */,
+				C3D54F1B2BA49C6D005EFE18 /* MathsView.swift */,
+				C3D54F192BA49C67005EFE18 /* LitView.swift */,
+				C3D54F172BA49C61005EFE18 /* CoursView.swift */,
+				C3D54F152BA49C52005EFE18 /* MathsExo.swift */,
+				C3D54F132BA49C4A005EFE18 /* EnglishArticles.swift */,
+				C3D54F112BA49C44005EFE18 /* WebView.swift */,
+				C3D54F0F2BA49C3D005EFE18 /* EnglishRess.swift */,
+				C3D54F0D2BA49C1F005EFE18 /* EnglishVid.swift */,
+				C3D54F0B2BA49C16005EFE18 /* FrenchQA.swift */,
+				C3D54F092BA49C0D005EFE18 /* MathsQA.swift */,
+				C3D54F072BA49C06005EFE18 /* AnglaisView.swift */,
 				C36BDB3D2BA08D2900E7EF19 /* RessourcesView.swift */,
 				C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */,
 				C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */,
@@ -264,6 +317,7 @@
 		C36BDB222BA08B2800E7EF19 /* ProfileChild */ = {
 			isa = PBXGroup;
 			children = (
+				C3E1B95B2BA48A0F00140747 /* ProfileChildViewAdded */,
 				C36BDB372BA08CE300E7EF19 /* ProfileView.swift */,
 				C36BDB392BA08CEF00E7EF19 /* DiagnosticView.swift */,
 				C36BDB3B2BA08CF900E7EF19 /* SendMessage.swift */,
@@ -288,6 +342,20 @@
 				C36BDB312BA08C9D00E7EF19 /* TendanceSchool.swift */,
 			);
 			path = TendanceChild;
+			sourceTree = "<group>";
+		};
+		C3E1B95B2BA48A0F00140747 /* ProfileChildViewAdded */ = {
+			isa = PBXGroup;
+			children = (
+				C3D54F052BA48B4F005EFE18 /* AddedHobbyView.swift */,
+				C3E1B9552BA48A0F00140747 /* DMButtonView.swift */,
+				C3E1B9562BA48A0F00140747 /* HobbiesListView.swift */,
+				C3E1B9572BA48A0F00140747 /* ProfileEditButtonView.swift */,
+				C3E1B9582BA48A0F00140747 /* ProfileInfosRectangleView.swift */,
+				C3E1B9592BA48A0F00140747 /* ProfilePictureView.swift */,
+				C3E1B95A2BA48A0F00140747 /* ProfileTextView.swift */,
+			);
+			path = ProfileChildViewAdded;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,41 +432,61 @@
 				C36BDAE52BA0892F00E7EF19 /* User.swift in Sources */,
 				C36BDB262BA08B6300E7EF19 /* CourseChoice.swift in Sources */,
 				C36BDB182BA08A9400E7EF19 /* DiagResults.swift in Sources */,
+				C3D54F202BA49C78005EFE18 /* EnglishQA.swift in Sources */,
+				C3E1B95E2BA48A0F00140747 /* ProfileEditButtonView.swift in Sources */,
 				C36BDB102BA08A4D00E7EF19 /* DiagDescription.swift in Sources */,
+				C3D54F0E2BA49C1F005EFE18 /* EnglishVid.swift in Sources */,
 				C36BDADD2BA0892F00E7EF19 /* Question.swift in Sources */,
 				C36BDB302BA08C8C00E7EF19 /* TendanceClass.swift in Sources */,
 				C36BDB3C2BA08CF900E7EF19 /* SendMessage.swift in Sources */,
+				C3E1B9612BA48A0F00140747 /* ProfileTextView.swift in Sources */,
 				C36BDB1C2BA08AD300E7EF19 /* ProfessorStudent.swift in Sources */,
 				C36BDB1A2BA08AC300E7EF19 /* InscriptionConnexion.swift in Sources */,
 				C36BDB142BA08A6F00E7EF19 /* DiagExpectations.swift in Sources */,
 				C36BDABF2BA0886700E7EF19 /* ContentView.swift in Sources */,
 				C36BDAE12BA0892F00E7EF19 /* Eleve.swift in Sources */,
 				C36BDB342BA08CC100E7EF19 /* OccurentQuestion.swift in Sources */,
+				C3D54F062BA48B4F005EFE18 /* AddedHobbyView.swift in Sources */,
 				C36BDB1E2BA08AFE00E7EF19 /* Connexion.swift in Sources */,
 				C36BDABD2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift in Sources */,
+				C3E1B95D2BA48A0F00140747 /* HobbiesListView.swift in Sources */,
+				C3E1B9602BA48A0F00140747 /* ProfilePictureView.swift in Sources */,
 				C36BDB362BA08CCB00E7EF19 /* QuestionFeedback.swift in Sources */,
 				C36BDB0E2BA08A2900E7EF19 /* ReusableView.swift in Sources */,
+				C3D54F1E2BA49C73005EFE18 /* MathsRess.swift in Sources */,
 				C36BDADC2BA0892F00E7EF19 /* Cours.swift in Sources */,
 				C36BDB162BA08A8600E7EF19 /* DiagDifficulties.swift in Sources */,
 				C36BDAE32BA0892F00E7EF19 /* Prof.swift in Sources */,
 				C36BDAE22BA0892F00E7EF19 /* EleveList.swift in Sources */,
+				C3D54F1A2BA49C67005EFE18 /* LitView.swift in Sources */,
+				C3D54F182BA49C61005EFE18 /* CoursView.swift in Sources */,
+				C3D54F162BA49C52005EFE18 /* MathsExo.swift in Sources */,
 				C36BDAE02BA0892F00E7EF19 /* MessageHistorique.swift in Sources */,
+				C3D54F1C2BA49C6D005EFE18 /* MathsView.swift in Sources */,
 				C36BDAE42BA0892F00E7EF19 /* ProfList.swift in Sources */,
 				C36BDB402BA08D3600E7EF19 /* QuestionHistory.swift in Sources */,
 				C36BDADE2BA0892F00E7EF19 /* TestDiagnostique.swift in Sources */,
 				C3BCAE4B2BA2F557002DC5D0 /* UsersProfiles_Added.swift in Sources */,
+				C3D54F0C2BA49C17005EFE18 /* FrenchQA.swift in Sources */,
 				C36BDB322BA08C9D00E7EF19 /* TendanceSchool.swift in Sources */,
 				C36BDB2E2BA08C8000E7EF19 /* TendanceBoard.swift in Sources */,
 				C36BDADB2BA0892F00E7EF19 /* Classes.swift in Sources */,
+				C3D54F082BA49C06005EFE18 /* AnglaisView.swift in Sources */,
 				C36BDB2A2BA08BAB00E7EF19 /* QuestionClass.swift in Sources */,
+				C3E1B95F2BA48A0F00140747 /* ProfileInfosRectangleView.swift in Sources */,
 				C36BDB282BA08B9200E7EF19 /* Tendances.swift in Sources */,
+				C3D54F142BA49C4A005EFE18 /* EnglishArticles.swift in Sources */,
+				C3D54F122BA49C44005EFE18 /* WebView.swift in Sources */,
+				C3D54F0A2BA49C0D005EFE18 /* MathsQA.swift in Sources */,
 				C36BDB202BA08B0800E7EF19 /* Inscription.swift in Sources */,
+				C3D54F102BA49C3D005EFE18 /* EnglishRess.swift in Sources */,
 				C36BDB122BA08A5900E7EF19 /* DiagMotivation.swift in Sources */,
 				C36BDB2C2BA08C5600E7EF19 /* Profile.swift in Sources */,
 				C36BDB382BA08CE300E7EF19 /* ProfileView.swift in Sources */,
 				C36BDADF2BA0892F00E7EF19 /* Message.swift in Sources */,
 				C36BDB3A2BA08CEF00E7EF19 /* DiagnosticView.swift in Sources */,
 				C36BDB422BA08D4400E7EF19 /* QuestionAnswer.swift in Sources */,
+				C3E1B95C2BA48A0F00140747 /* DMButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

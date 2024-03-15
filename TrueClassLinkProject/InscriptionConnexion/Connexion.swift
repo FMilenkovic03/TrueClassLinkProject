@@ -3,7 +3,7 @@ import SwiftUI
 
 struct Connexion: View {
     
-    @ObservedObject var user = User(email: "", mdp: "", name: "Temp", prenom: "Temp")
+    @ObservedObject var user = User(email: "", mdp: "", name: "Temp", surname: "Temp")
     @State private var navigate = false
     @State private var showingAlert = false
     

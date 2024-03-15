@@ -7,8 +7,6 @@
 
 import Foundation
 
-// liste des disciplines
-
 enum PointsForts {
     case travailEquipe (name: String) // "Travail en équipe"
     case apprendreVite (name: String) // "Apprend vite"
@@ -31,14 +29,18 @@ enum PointsFaibles {
 class Eleve: User {
     
     var classe: Classes
-    var pointsForts: [PointsForts]?
-    var pointsFaibles: [PointsFaibles]?
+    var pointsForts: [PointsForts] = []
+    var pointsFaibles: [PointsFaibles] = []
     
-    init(email: String, mdp: String, name: String, prenom: String, classe: Classes) {
+    init(email: String, mdp: String, name: String, surname: String, classe: Classes) {
         self.classe = classe
-        super.init(email: email, mdp: mdp, name: name, prenom: prenom)
+        super.init(email: email, mdp: mdp, name: name, surname: surname)
     }
-    
+}
+
+
+
+
 //    func creerEleve(email: String, mdp: String, name: String, prenom: String, classe: Classes) -> Eleve? {
 //        if email.isEmpty || mdp.isEmpty {
 //            print("Veuillez remplir tous les champs.")
@@ -51,6 +53,3 @@ class Eleve: User {
 //        }
 //
 //    }
-    
-    
-}
