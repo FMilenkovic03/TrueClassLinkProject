@@ -28,14 +28,14 @@ struct Inscription: View {
                   return
               }
         
-           if eleveList.eleveExists(email: email) {
-               emailExistsError = true
-           } else {
-               if let newEleve = eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) {
-                   navigateToConnexion = true
-               }
-           }
-       }
+        if eleveList.eleveExists(email: email, mdp: password) {
+            emailExistsError = true
+        } else {
+            if let newEleve = eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) {
+                navigateToConnexion = true
+                }
+                }
+    }
    
     @ObservedObject var listeClasses = ListeClasses()
        

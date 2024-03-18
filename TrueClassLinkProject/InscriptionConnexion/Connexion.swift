@@ -1,9 +1,13 @@
 // Connexion.swift
+
 import SwiftUI
 
+/// A view for user login.
 struct Connexion: View {
     
     @ObservedObject var user = User(email: "", mdp: "", name: "Temp", surname: "Temp")
+    @ObservedObject var eleveList = EleveList() // Ajoutez cette ligne
+
     @State private var navigate = false
     @State private var showingAlert = false
     
@@ -60,8 +64,10 @@ struct Connexion: View {
         }
     }
     
+    /// Validates the user's email and password.
+    /// - Returns: A boolean value indicating whether the credentials are valid or not.
     func validateCredentials() -> Bool {
-        return !user.email.isEmpty && !user.mdp.isEmpty
+        return eleveList.eleveExists(email: user.email, mdp: user.mdp)
     }
 }
 

@@ -15,7 +15,6 @@ struct InscriptionConnexion: View {
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
-                
                 VStack {
                     Image("logo")
                         .resizable()
@@ -27,10 +26,10 @@ struct InscriptionConnexion: View {
                         .bold()
                         .padding(.bottom, 50) // Ajout de la marge inférieure
                     
-                    CustomButton(text: "Inscription", width: 150, height: 50, cornerRadius: 5, destination: ProfessorStudent())
+                    CustomButton(text: "Inscription", width: 200, height: 50, cornerRadius: 30, destination: ProfessorStudent())
                     .padding()
                     
-                    CustomButton(text: "Connexion", width: 150, height: 50, cornerRadius: 5, destination: ProfessorStudent())
+                    CustomButton(text: "Connexion", width: 200, height: 50, cornerRadius: 30, destination: ProfessorStudent())
                         .padding()
                 }
             }

@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TrueClassLinkProjectApp: App {
+    let eleveList = EleveList()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProfessorStudent()
+                .environmentObject(eleveList)
         }
     }
 }

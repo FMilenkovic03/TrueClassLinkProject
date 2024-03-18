@@ -7,8 +7,8 @@
 
 import Foundation
 
-class EleveList{
-    var listeEleve: [Eleve] = []
+class EleveList: ObservableObject{
+    @Published var listeEleve: [Eleve] = []
     
     
     func addEleve(eleve: Eleve){
@@ -38,8 +38,8 @@ class EleveList{
             
     }
     
-    func eleveExists(email: String) -> Bool {
-        return listeEleve.contains(where: { $0.email == email })
+    func eleveExists(email: String, mdp: String) -> Bool {
+        return listeEleve.contains(where: { $0.email == email && $0.mdp == mdp})
     }
 
 }
