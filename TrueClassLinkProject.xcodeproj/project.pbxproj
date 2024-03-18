@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C36BDABD2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDABC2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift */; };
-		C36BDABF2BA0886700E7EF19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDABE2BA0886700E7EF19 /* ContentView.swift */; };
 		C36BDAC12BA0886800E7EF19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BDAC02BA0886800E7EF19 /* Assets.xcassets */; };
 		C36BDAC42BA0886800E7EF19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BDAC32BA0886800E7EF19 /* Preview Assets.xcassets */; };
 		C36BDADB2BA0892F00E7EF19 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDACA2BA0892F00E7EF19 /* Classes.swift */; };
@@ -73,7 +72,6 @@
 /* Begin PBXFileReference section */
 		C36BDAB92BA0886700E7EF19 /* TrueClassLinkProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrueClassLinkProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36BDABC2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueClassLinkProjectApp.swift; sourceTree = "<group>"; };
-		C36BDABE2BA0886700E7EF19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C36BDAC02BA0886800E7EF19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C36BDAC32BA0886800E7EF19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C36BDACA2BA0892F00E7EF19 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				C36BDB092BA089BA00E7EF19 /* Dashboard */,
 				C36BDADA2BA0892F00E7EF19 /* Models */,
 				C36BDABC2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift */,
-				C36BDABE2BA0886700E7EF19 /* ContentView.swift */,
 				C36BDAC02BA0886800E7EF19 /* Assets.xcassets */,
 				C36BDAC22BA0886800E7EF19 /* Preview Content */,
 			);
@@ -443,7 +440,6 @@
 				C36BDB1C2BA08AD300E7EF19 /* ProfessorStudent.swift in Sources */,
 				C36BDB1A2BA08AC300E7EF19 /* InscriptionConnexion.swift in Sources */,
 				C36BDB142BA08A6F00E7EF19 /* DiagExpectations.swift in Sources */,
-				C36BDABF2BA0886700E7EF19 /* ContentView.swift in Sources */,
 				C36BDAE12BA0892F00E7EF19 /* Eleve.swift in Sources */,
 				C36BDB342BA08CC100E7EF19 /* OccurentQuestion.swift in Sources */,
 				C3D54F062BA48B4F005EFE18 /* AddedHobbyView.swift in Sources */,

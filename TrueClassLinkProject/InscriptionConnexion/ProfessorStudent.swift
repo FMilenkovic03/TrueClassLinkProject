@@ -34,7 +34,7 @@ struct ProfessorStudent: View {
                     navigateToInscription = true
                 })
                 .padding()
-                .fullScreenCover(isPresented: $navigateToInscription, content: InscriptionConnexion.init)
+                .fullScreenCover(isPresented: $navigateToInscription, content: Inscription.init)
                 CustomButton2(text: "Elève", width: 200, height: 50, cornerRadius: 30, action: {
                     isEleve = true
                     navigateToInscription = true
