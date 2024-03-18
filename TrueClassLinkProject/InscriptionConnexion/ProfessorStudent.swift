@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ProfessorStudent: View {
-    @State private var navigateToConnexion = false
-    @State private var navigateToInscription = false
-    @State private var isEleve = false
+    @EnvironmentObject var userChoice: UserChoice
+    @State private var navigate = false
     var body: some View {
         ZStack{
             
@@ -30,21 +29,32 @@ struct ProfessorStudent: View {
                 Spacer()
                     .frame(height: 50)
                 CustomButton2(text: "Professeur", width: 200, height: 50, cornerRadius: 30, action: {
-                    isEleve = false
-                    navigateToInscription = true
+                    navigate = true
                 })
                 .padding()
-                .fullScreenCover(isPresented: $navigateToInscription, content: Inscription.init)
+                .fullScreenCover(isPresented: $navigate) {
+                    if userChoice.didChooseInscription {
+                        Inscription()
+                    } else {
+                        Connexion()
+                    }
+                }
                 CustomButton2(text: "Elève", width: 200, height: 50, cornerRadius: 30, action: {
-                    isEleve = true
-                    navigateToInscription = true
+                    navigate = true
                 })
-                .fullScreenCover(isPresented: $navigateToConnexion, content: Connexion.init)
+                .padding()
+                .fullScreenCover(isPresented: $navigate) {
+                    if userChoice.didChooseInscription {
+                        Inscription()
+                    } else {
+                        Connexion()
+                    }
+                }
             }
         }
     }
 }
 
 #Preview {
-    ProfessorStudent()
+    ProfessorStudent().environmentObject(UserChoice())
 }

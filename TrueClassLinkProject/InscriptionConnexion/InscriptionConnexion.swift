@@ -7,7 +7,13 @@
 
 import SwiftUI
 
+class UserChoice: ObservableObject {
+    @Published var didChooseInscription: Bool = false
+}
+
 struct InscriptionConnexion: View {
+    @EnvironmentObject var userChoice: UserChoice
+    @State private var navigateToProfessorStudent = false
     var body: some View {
         NavigationView {
             ZStack {
@@ -26,11 +32,19 @@ struct InscriptionConnexion: View {
                         .bold()
                         .padding(.bottom, 50) // Ajout de la marge inférieure
                     
-                    CustomButton(text: "Inscription", width: 200, height: 50, cornerRadius: 30, destination: ProfessorStudent())
+                    CustomButton2(text: "Inscription", width: 200, height: 50, cornerRadius: 30, action: {
+                        userChoice.didChooseInscription = true
+                        navigateToProfessorStudent = true
+                    })
                     .padding()
+                    .fullScreenCover(isPresented: $navigateToProfessorStudent, content: ProfessorStudent.init)
                     
-                    CustomButton(text: "Connexion", width: 200, height: 50, cornerRadius: 30, destination: ProfessorStudent())
-                        .padding()
+                    CustomButton2(text: "Connexion", width: 200, height: 50, cornerRadius: 30, action: {
+                        userChoice.didChooseInscription = false
+                        navigateToProfessorStudent = true
+                    })
+                    .padding()
+                    .fullScreenCover(isPresented: $navigateToProfessorStudent, content: ProfessorStudent.init)
                 }
             }
         }
@@ -39,5 +53,5 @@ struct InscriptionConnexion: View {
 
 
 #Preview {
-    InscriptionConnexion()
+    InscriptionConnexion().environmentObject(UserChoice())
 }
