@@ -23,7 +23,7 @@ struct Inscription: View {
     func saveAction() {
            guard let classe = selectedClass else { return }
         
-        if name.isEmpty || surname.isEmpty || email.isEmpty || password.isEmpty || classe == nil {
+        if name.isEmpty || surname.isEmpty || email.isEmpty || password.isEmpty {
                   fillAllFieldsError = true
                   return
               }
@@ -31,7 +31,7 @@ struct Inscription: View {
         if eleveList.eleveExists(email: email, mdp: password) {
             emailExistsError = true
         } else {
-            if let newEleve = eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) {
+            if (eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) != nil) {
                 navigateToConnexion = true
                 }
                 }
@@ -64,8 +64,11 @@ struct Inscription: View {
                        .ignoresSafeArea()
                    VStack {
                        ForEach(arrayTitle, id: \.self){ title in
+                       if title == "Mot de passe" {
+                           SecureFieldView(text: textForTitle(title), title: title)
+                          } else {
                            TextFieldView(text: textForTitle(title), title: title)
-                           
+                          }   
                        }
                        
                        Button(action: {
@@ -150,7 +153,6 @@ struct Inscription: View {
    }
 
 
-
 #Preview {
     Inscription()
 }
@@ -165,7 +167,7 @@ struct ModalPicker: View {
         NavigationView {
             VStack {
                 Picker(selection: $selectedClassIndex, label: Text("")) {
-                    ForEach(0..<listeClasses.classes.count) { index in
+                    ForEach(listeClasses.classes.indices, id: \.self) { index in
                         Text(self.listeClasses.classes[index].name).tag(index)
                     }
                 }
