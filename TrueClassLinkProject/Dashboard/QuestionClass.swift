@@ -14,8 +14,8 @@ struct QuestionClass: View {
     @State var selectedType: TypeQuestion?
     @State private var showModal: Bool = false
     @State private var clickedType: TypeQuestion?
-    @ObservedObject var currentProfile: User = User(email: "ff", mdp: "dd", name: "Vache", surname: "Julie")
-    @ObservedObject var destinaire: Prof = Prof(email: "", mdp: "", name: "Kowalski", surname:"Pierre", classesProf: [Classes(name: "2nd")], discipline: [.svt])
+    @ObservedObject var currentProfile: User = User(email: "ff", mdp: "dd", name: "Vache", surname: "Julie", mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: ""))
+    @ObservedObject var destinaire: User = User(email: "", mdp: "", name: "Kowalski", surname:"Pierre", mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: ""))
     
     var body: some View {
         NavigationStack{
@@ -48,14 +48,14 @@ struct QuestionClass: View {
                         }
                         
                     }
-                    NavigationLink(destination: QuestionHistory(messageHistorique: hist)){
-                        Text("coucou")
-                    }
-                    Button(action: {
-                        print(hist.historique.count)
-                    }, label: {
-                        Text("Button")
-                    })
+//                    NavigationLink(destination: QuestionHistory(messageHistorique: hist)){
+//                        Text("coucou")
+//                    }
+//                    Button(action: {
+//                        print(hist.historique.count)
+//                    }, label: {
+//                        Text("Button")
+//                    })
                     
                 }
             }
@@ -66,7 +66,7 @@ struct QuestionClass: View {
 }
 
 #Preview {
-    QuestionClass(message: Message(auteur: User(email: "", mdp: "", name: "", surname: ""), destinaire: User(email: "", mdp: "", name: "", surname: ""), typeQuestion: .poserQuest, message: ""), hist: MessageHistorique())
+    QuestionClass(message: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""), hist: MessageHistorique())
 }
 
 

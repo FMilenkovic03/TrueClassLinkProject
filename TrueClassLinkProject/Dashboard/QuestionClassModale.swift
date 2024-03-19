@@ -12,8 +12,8 @@ struct QuestionClassModale: View {
     var selectedType: TypeQuestion
     @ObservedObject  var message: Message
     @ObservedObject var hist: MessageHistorique = MessageHistorique()
-    @ObservedObject var currentProfile: User = User(email: "ff", mdp: "dd", name: "aa", surname: "dd")
-    @ObservedObject var destinaire: Prof = Prof(email: "", mdp: "", name: "Kowalski", surname:"Pierre", classesProf: [Classes(name: "2nd")], discipline: [.svt])
+    @ObservedObject var currentProfile: User = User(email: "ff", mdp: "dd", name: "aa", surname: "dd", mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: ""))
+//    @ObservedObject var destinaire: Prof = Prof(email: "", mdp: "", name: "Kowalski", surname:"Pierre", classesProf: [Classes(name: "2nd")], discipline: [.svt])
     @State var messageText: String = ""
     @State private var messageSent: Bool = false
     @State private var showAlert: Bool = false
@@ -67,7 +67,7 @@ struct QuestionClassModale: View {
                                                 )
                                             }
                     }else if messageSent{
-                        Text("Le message a été bien envoyé. Le professeur \(destinaire.name) vous répondra au plus vite")
+                        Text("Le message a été bien envoyé. Le professeur McDonald vous répondra au plus vite")
                                 .transition(.opacity)
                                 .animation(.easeInOut(duration: 1.5), value: messageSent)
                         
@@ -81,7 +81,7 @@ struct QuestionClassModale: View {
 }
 
 #Preview {
-    QuestionClassModale(selectedType: .seSensPasBien, message: Message(auteur: User(email: "", mdp: "", name: "", surname: ""), destinaire: User(email: "", mdp: "", name: "", surname: ""), typeQuestion: .poserQuest, message: ""))
+    QuestionClassModale(selectedType: .seSensPasBien, message: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""))
 }
 
 

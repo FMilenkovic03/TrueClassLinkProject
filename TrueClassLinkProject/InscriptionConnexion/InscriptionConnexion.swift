@@ -14,6 +14,7 @@ class UserChoice: ObservableObject {
 struct InscriptionConnexion: View {
     @EnvironmentObject var userChoice: UserChoice
     @State private var navigateToProfessorStudent = false
+    var hist: MessageHistorique
     var body: some View {
         NavigationView {
             ZStack {
@@ -37,14 +38,19 @@ struct InscriptionConnexion: View {
                         navigateToProfessorStudent = true
                     })
                     .padding()
-                    .fullScreenCover(isPresented: $navigateToProfessorStudent, content: ProfessorStudent.init)
-                    
+                    .fullScreenCover(isPresented: $navigateToProfessorStudent) {
+                        ProfessorStudent(hist: hist)
+                            .environmentObject(userChoice)
+                    }
                     CustomButton2(text: "Connexion", width: 200, height: 50, cornerRadius: 30, action: {
                         userChoice.didChooseInscription = false
                         navigateToProfessorStudent = true
                     })
                     .padding()
-                    .fullScreenCover(isPresented: $navigateToProfessorStudent, content: ProfessorStudent.init)
+                    .fullScreenCover(isPresented: $navigateToProfessorStudent) {
+                        ProfessorStudent(hist: hist)
+                            .environmentObject(userChoice)
+                    }
                 }
             }
         }
@@ -53,5 +59,5 @@ struct InscriptionConnexion: View {
 
 
 #Preview {
-    InscriptionConnexion().environmentObject(UserChoice())
+    InscriptionConnexion(hist: MessageHistorique()).environmentObject(UserChoice())
 }

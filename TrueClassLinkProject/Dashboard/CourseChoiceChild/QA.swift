@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct FrenchQA: View {
-    
+struct QA: View {
+    var coursName: String
     var body: some View {
         ZStack{
             Image("backgroundBase")
@@ -17,7 +17,7 @@ struct FrenchQA: View {
                 .scaledToFill()
         
             VStack{
-                Text("Français Q&A")
+                Text("\(coursName) Q&A")
                     .bold()
                     .font(.custom("SFPro-bold", size: 33))
                     .padding(.bottom, 530)
@@ -62,6 +62,6 @@ struct FrenchQA: View {
 
 
 #Preview {
-    FrenchQA()
+    QA(coursName: "Français")
     
 }

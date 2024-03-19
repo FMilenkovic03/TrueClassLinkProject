@@ -29,15 +29,14 @@ enum PointsFaibles {
 class Eleve: User {
     
     var classe: Classes
-    var pointsForts: [PointsForts] = []
-    var pointsFaibles: [PointsFaibles] = []
+    var pointsForts: [PointsForts]?
+    var pointsFaibles: [PointsFaibles]?
     
     init(email: String, mdp: String, name: String, surname: String, classe: Classes) {
         self.classe = classe
-        super.init(email: email, mdp: mdp, name: name, surname: surname)
+        super.init(email: email, mdp: mdp, name: name, surname: surname, mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: ""))
     }
 }
-
 
 
 

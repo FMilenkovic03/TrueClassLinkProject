@@ -36,26 +36,30 @@ struct Inscription: View {
             }
         }
     }
+    
+
    
     @ObservedObject var listeClasses = ListeClasses()
        
-       init() {
-           self.listeClasses = listeClasses
-           self.listeClasses.addClass(className: "2nd1")
-           self.listeClasses.addClass(className: "2nd2")
-           self.listeClasses.addClass(className: "2nd3")
-           self.listeClasses.addClass(className: "1er1")
-           self.listeClasses.addClass(className: "1er2")
-           self.listeClasses.addClass(className: "1er3")
-           self.listeClasses.addClass(className: "Ter1")
-           self.listeClasses.addClass(className: "Ter2")
-           self.listeClasses.addClass(className: "Ter3")
-       }
+//       init() {
+//           self.listeClasses = listeClasses
+//           self.listeClasses.addClass(className: "2nd1")
+//           self.listeClasses.addClass(className: "2nd2")
+//           self.listeClasses.addClass(className: "2nd3")
+//           self.listeClasses.addClass(className: "1er1")
+//           self.listeClasses.addClass(className: "1er2")
+//           self.listeClasses.addClass(className: "1er3")
+//           self.listeClasses.addClass(className: "Ter1")
+//           self.listeClasses.addClass(className: "Ter2")
+//           self.listeClasses.addClass(className: "Ter3")
+//       }
     
        
        var arrayTitle: [String] = ["Nom", "Prenom", "Mail", "Mot de passe"]
         @State private var emailExistsError = false
-       
+
+    var hist: MessageHistorique
+    
        var body: some View {
            NavigationStack{
                ZStack{
@@ -123,7 +127,7 @@ struct Inscription: View {
                .navigationBarHidden(navigateToConnexion) // Masquer la barre de navigation si nous naviguons vers la page de connexion
                            .background(
                                NavigationLink(
-                                destination: Connexion(eleveList: eleveList), // Remplacez Connexion par le nom de votre vue de connexion
+                                destination: Connexion(eleveList: eleveList, hist: hist), // Remplacez Connexion par le nom de votre vue de connexion
                                    isActive: $navigateToConnexion,
                                    label: {
                                        EmptyView()
@@ -154,7 +158,7 @@ struct Inscription: View {
 
 
 #Preview {
-    Inscription()
+    Inscription(hist: MessageHistorique())
 }
 
 struct ModalPicker: View {

@@ -76,12 +76,12 @@ struct EnglishRess: View {
                                 .foregroundStyle(.white)
                         }
                         
-                        NavigationLink(destination: LitView()){
-                            OrangeBigButton2(text: "Simple past", imageButton: Image(systemName: "folder"))
-                                .padding(.top, 10)
-                                .foregroundStyle(.white)
-                                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                        }
+//                        NavigationLink(destination: LitView()){
+//                            OrangeBigButton2(text: "Simple past", imageButton: Image(systemName: "folder"))
+//                                .padding(.top, 10)
+//                                .foregroundStyle(.white)
+//                                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+//                        }
                     }
                     .padding(.top, 30)
                 }

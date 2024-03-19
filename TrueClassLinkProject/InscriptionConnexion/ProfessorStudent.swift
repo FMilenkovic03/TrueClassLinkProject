@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfessorStudent: View {
     @EnvironmentObject var userChoice: UserChoice
     @State private var navigate = false
+    var hist: MessageHistorique
     var body: some View {
         ZStack{
             
@@ -34,9 +35,9 @@ struct ProfessorStudent: View {
                 .padding()
                 .fullScreenCover(isPresented: $navigate) {
                     if userChoice.didChooseInscription {
-                        Inscription()
+                        Inscription(hist: hist)
                     } else {
-                        Connexion(eleveList: EleveList())
+                        Connexion(eleveList: EleveList(), hist: hist)
                     }
                 }
                 CustomButton2(text: "Elève", width: 200, height: 50, cornerRadius: 30, action: {
@@ -45,9 +46,9 @@ struct ProfessorStudent: View {
                 .padding()
                 .fullScreenCover(isPresented: $navigate) {
                     if userChoice.didChooseInscription {
-                        Inscription()
+                        Inscription(hist: hist)
                     } else {
-                        Connexion(eleveList: EleveList())
+                        Connexion(eleveList: EleveList(), hist: hist)
                     }
                 }
             }
@@ -56,5 +57,5 @@ struct ProfessorStudent: View {
 }
 
 #Preview {
-    ProfessorStudent().environmentObject(UserChoice())
+    ProfessorStudent(hist: MessageHistorique()).environmentObject(UserChoice())
 }

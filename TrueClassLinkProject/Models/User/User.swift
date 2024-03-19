@@ -32,23 +32,34 @@ let hobbies: [Hobby] = [
 ]
 
 
-enum Mood { //ajout io
-    case angel (imageName: String)
-    case angry (imageName: String)
-    case badass (imageName: String)
-    case jaded (imageName: String)
-    case coffee (imageName: String)
-    case demon (imageName: String)
-    case love (imageName: String)
-    case joyfull (imageName: String)
-    case overwhelmed (imageName: String)
-    case playfull (imageName: String)
-    case sick (imageName: String)
-    case sleepy (imageName: String)
-    case smart (imageName: String)
-    case surprise (imageName: String)
+struct Mood: Identifiable, Hashable {
+    var id = UUID()
+    var moodIcon: String
 }
 
+let moods: [Mood] = [
+    Mood(moodIcon: "moodNone"),
+    Mood(moodIcon: "moodAngel"),
+    Mood(moodIcon: "moodAngry"),
+    Mood(moodIcon: "moodBadass"),
+    Mood(moodIcon: "moodCoffee"),
+    Mood(moodIcon: "moodDemon"),
+    Mood(moodIcon: "moodJaded"),
+    Mood(moodIcon: "moodInLove"),
+    Mood(moodIcon: "moodJoyfull"),
+    Mood(moodIcon: "moodOverwhelmed"),
+    Mood(moodIcon: "moodPlayfull"),
+    Mood(moodIcon: "moodSick"),
+    Mood(moodIcon: "moodSleepy"),
+    Mood(moodIcon: "moodSmart")
+]
+
+struct EnCeMoment: Identifiable, Hashable {
+    var id = UUID()
+    var myMusic: String
+    var myPride: String
+    var myChallenge: String
+}
 
 
 class User: ObservableObject {
@@ -57,15 +68,18 @@ class User: ObservableObject {
     @Published var name: String
     @Published var surname: String
     @Published var hobby: [Hobby] = []
-    @Published var mood: Mood = .angel(imageName: "heart")
-    @Published var profilePicture: String = ""
-    @Published var enCeMoment: [String] = []
+    @Published var mood: Mood
+    @Published var profilePicture: String?
+    @Published var enCeMoment: EnCeMoment
     
-    init(email:String,mdp: String, name: String, surname: String) {
+    init(email: String, mdp: String, name: String, surname: String, mood: Mood, profilePicture: String? = nil, enCeMoment: EnCeMoment) {
         self.email = email
         self.mdp = mdp
         self.name = name
         self.surname = surname
+        self.mood = mood
+        self.profilePicture = profilePicture
+        self.enCeMoment = enCeMoment
     }
     
     
@@ -74,16 +88,17 @@ class User: ObservableObject {
         return hobby
         }
     
-    func removeAllHobbies() -> [Hobby] {
-        self.hobby.removeAll()
-        return hobby
-    }
     
     func removeOne(removedHobby: Hobby) -> [Hobby] {
         if let index = hobby.firstIndex(of: removedHobby) {
             self.hobby.remove(at: index)
         }
             return hobby
+    }
+    func countHobby(countedHobby: [Hobby]) -> Int {
+        let count = hobby.count
+        return count
+        
     }
     
 }

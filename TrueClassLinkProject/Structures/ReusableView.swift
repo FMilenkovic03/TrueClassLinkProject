@@ -47,7 +47,7 @@ struct tabViewBar: View {
     var message: Message
     var body: some View {
         TabView {
-            CourseChoice()
+            CourseChoice(hist: hist)
                 .tabItem {Label("Accueil", systemImage: "house")}
             QuestionClass(message: message, hist: hist)
                 .tabItem {Label("Questions", systemImage: "bell")}
@@ -63,12 +63,19 @@ struct tabViewBar: View {
 /// A big orange button with text and an image.
 struct OrangeBigButton: View {
     let text: String
-    let imageButton: Image
+    let imageName: String
     
+    func xOffsetForText() -> CGFloat {
+            if text.count < 8 {
+                return 40
+            } else if text.count < 15 {
+                return 20 // Ajoutez ou ajustez les conditions selon vos besoins
+            } else {
+                return 8
+            }
+        }
     var body: some View {
-        Button(action: {
-            // Action to perform when the button is tapped
-        }) {
+      
             ZStack {
                 Rectangle()
                     .frame(width: 150, height: 120)
@@ -86,16 +93,17 @@ struct OrangeBigButton: View {
                         .clipShape(.rect(topLeadingRadius: 0, bottomLeadingRadius: 16, bottomTrailingRadius: 0, topTrailingRadius: 16))
                         .offset(x: 38, y: -10)
                     
-                    imageButton
+                        Image(systemName: imageName)
                         .resizable()
                         .frame(width: 25, height: 25)
                         .offset(x: -40)
+                        .foregroundColor(.white)
+                    
                     
                     Text(text)
                         .foregroundColor(.white)
-                        .offset(x: 40)
+                        .offset(x: xOffsetForText())
                 }
-            }
         }
     }
 }
@@ -106,9 +114,7 @@ struct NonFilledOrangeButton: View {
     let imageButton: Image
     
     var body: some View {
-        Button(action: {
-            
-        }) {
+         
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.orangeEdu, lineWidth: 2)
@@ -125,7 +131,7 @@ struct NonFilledOrangeButton: View {
             }
         }
     }
-}
+
 
 /// A button with a question and an answer.
 struct ButtonAnswer: View {
@@ -229,7 +235,7 @@ struct ReusableView: View {
             VStack(spacing: 20) {
                 CustomButton(text: "Connexion", width: 350, height: 50, cornerRadius: 30, destination: ReusableView())
                
-                OrangeBigButton(text: "Histoire", imageButton: Image("vector"))
+                OrangeBigButton(text: "Physique-Chimie", imageName: "book")
                 NonFilledOrangeButton(text: "Historique", imageButton: Image(systemName: "star"))
                 ButtonAnswer(question: "la question", answer: "la réponse")
                 RectangularTogglableButton(buttonText: "lol")

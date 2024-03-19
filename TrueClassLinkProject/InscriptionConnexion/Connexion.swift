@@ -5,11 +5,14 @@ import SwiftUI
 /// A view for user login.
 struct Connexion: View {
     
-    @ObservedObject var user = User(email: "", mdp: "", name: "Temp", surname: "Temp")
+    @ObservedObject var user = User(email: "", mdp: "", name: "Temp", surname: "Temp", mood: Mood(moodIcon: "moodNone"), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: ""))
     @ObservedObject var eleveList: EleveList // Ajoutez cette ligne
 
     @State private var navigate = false
     @State private var showingAlert = false
+    
+    var hist: MessageHistorique
+
     
     var body: some View {
         NavigationStack {
@@ -47,8 +50,8 @@ struct Connexion: View {
                             Alert(title: Text("Erreur"), message: Text("Veuillez entrer un email et un mot de passe valides"), dismissButton: .default(Text("OK")))
                         }
                         .padding()
-//                        .navigationDestination(isPresented: $navigate, destination: {
-//                            CourseChoice()})
+                        .navigationDestination(isPresented: $navigate, destination: {
+                            CourseChoice(hist: hist)})
                         
                     }
                     Spacer()
@@ -73,5 +76,5 @@ struct Connexion: View {
 }
 
 #Preview {
-    Connexion(eleveList: EleveList())
+    Connexion(eleveList: EleveList(), hist: MessageHistorique())
 }

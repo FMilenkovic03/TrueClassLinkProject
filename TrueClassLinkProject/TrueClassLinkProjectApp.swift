@@ -12,7 +12,7 @@ struct TrueClassLinkProjectApp: App {
     let eleveList = EleveList()
     var body: some Scene {
         WindowGroup {
-            InscriptionConnexion()
+            InscriptionConnexion(hist: MessageHistorique())
                 .environmentObject(eleveList)
         }
     }

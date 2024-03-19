@@ -4,15 +4,14 @@ struct AnnaelStudentProfileView: View {
     @State var profileEditMode: Bool
     @State var profilePictureExists: Bool
     @ObservedObject var eleve: Eleve
+    @State var showingAlert: Bool
+    
     var ownProfile: Bool = true
     
     var body: some View {
-        ZStack {
-            Image("backgroundBase")
-                .resizable()
-                .ignoresSafeArea()
+        
             
-            VStack {
+            VStack(alignment: .center) {
                 HStack {
                     Spacer()
                     ProfilePicture(profileEditMode: $profileEditMode, profilePictureExists: $profilePictureExists)
@@ -28,7 +27,7 @@ struct AnnaelStudentProfileView: View {
                         Spacer()
                     }
                 } //Tête de profil
-                .padding(.bottom, 50)
+                .padding(.vertical, 30)
                 
                 Text("Loisirs")
                     .font(.title2)
@@ -36,28 +35,32 @@ struct AnnaelStudentProfileView: View {
                     .foregroundStyle(.orangeEdu)
                     .multilineTextAlignment(.leading)
                     .padding(.bottom, -5)
+    
+                    ProfileHobbiesRectangle(profileEditMode: $profileEditMode, eleve: eleve)
                 
-                ZStack {
-                    ProfileInfosRectangle()
-                    if profileEditMode == true {
-                        AddHobbiesIcon(profileEditMode: $profileEditMode, showingHobbiesList: false, eleve: eleve)
-                    }
-                    LazyVGrid(columns: Array(repeating: GridItem(), count: 3), spacing: 5) {
-                        ForEach(eleve.hobby, id: \.self) { hobby in
-                            AddedHobbyView(eleve: eleve, profileEditMode: $profileEditMode)
-                            }
-                            .padding(.bottom, 20)
-    
-                        }
-                    }
-                }
+                Text("En ce moment")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.orangeEdu)
+                    .multilineTextAlignment(.leading)
+                    .padding(.bottom, -5)
+                    .padding(.top, 20)
+                ProfileLatelyRectangleView(profileEditMode: $profileEditMode, eleve: eleve, showingAlert: showingAlert)
+                MoodView(profileEditMode: $profileEditMode, eleve: eleve, showingMoodsList: false)
+                Spacer()
             }
+            
+            
         }
-    }
     
+    }
+       
+        
+    
+
 
 struct AnnaelStudentProfileView_Preview : PreviewProvider {
     static var previews: some View {
-        AnnaelStudentProfileView(profileEditMode: true, profilePictureExists: true, eleve: studentProfiles[0])
+        AnnaelStudentProfileView(profileEditMode: true, profilePictureExists: true, eleve: studentProfiles[0], showingAlert: false)
     }
 }

@@ -5,8 +5,6 @@
 //  Created by Apprenant 46 on 11/03/2024.
 //
 
-// à faire :
-
 
 import SwiftUI
 
@@ -27,7 +25,7 @@ struct AddHobbiesIcon: View {
                         Circle()
                             .frame(width: 30)
                             .foregroundStyle(.purpleEdu)
-                        Image(systemName: "questionmark.circle")
+                        Image(systemName: "plus.circle")
                             .resizable()
                             .frame(width: 20, height: 20)
                             .foregroundStyle(.white)
@@ -57,28 +55,38 @@ struct AddHobbiesIcon: View {
                         .cornerRadius(16)
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     VStack {
-                        LazyVGrid(columns: Array(repeating: GridItem(), count: 3), spacing: 5) {
-                            ForEach(hobbies) { hobby in
-                                Button(action: {
-                                    let test2 = eleve.addHobby(oneHobby: hobby)
-                                    print(test2)
-                                    //                                        dismiss()
-                                }, label: {
-                                    VStack {
-                                        Image(systemName: hobby.hobbyIcon)
-                                            .foregroundStyle(.purpleEdu)
-                                        Text(hobby.hobbyName)
-                                            .fontWeight(.light)
-                                            .font(.caption2)
-                                            .multilineTextAlignment(.center)
-                                            .foregroundStyle(.purpleEdu)
-                                            .frame(width: 60)
-                                    }
-                                    .padding(.bottom, 20)
-                                })
+                        let count = eleve.countHobby(countedHobby: eleve.hobby)
+                        if count < 6 {
+                            LazyVGrid(columns: Array(repeating: GridItem(), count: 3), spacing: 5) {
+                                ForEach(hobbies) { hobby in
+                                    Button(action: {
+                                        _ = eleve.addHobby(oneHobby: hobby)
+                                        
+                                    }, label: {
+                                        VStack {
+                                            Image(systemName: hobby.hobbyIcon)
+                                                .foregroundStyle(.purpleEdu)
+                                            Text(hobby.hobbyName)
+                                                .fontWeight(.light)
+                                                .font(.caption2)
+                                                .multilineTextAlignment(.center)
+                                                .foregroundStyle(.purpleEdu)
+                                                .frame(width: 60)
+                                        }
+                                        .padding(.bottom, 20)
+                                    })
+                                }
                             }
+                            .padding(.bottom, 20)
                         }
-                        .padding(.bottom, 20)
+                        else if count > 5 {
+                            Text("Tu ne peux pas afficher plus de 6 hobbies")
+                                .font(.title)
+                                .foregroundStyle(.purpleEdu)
+                                .multilineTextAlignment(.center)
+                                .frame(width: 300, height: 500)
+                        }
+                        
                         Button(action: {
                             dismiss()
                         }, label: {
@@ -92,7 +100,6 @@ struct AddHobbiesIcon: View {
                     }
                 }
             }
-            .frame(width: 340, height: 500)
         }
     }
 
