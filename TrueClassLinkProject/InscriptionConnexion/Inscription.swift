@@ -34,7 +34,7 @@ struct Inscription: View {
             if (eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) != nil) {
                 navigateToConnexion = true
                 }
-                }
+            }
     }
    
     @ObservedObject var listeClasses = ListeClasses()

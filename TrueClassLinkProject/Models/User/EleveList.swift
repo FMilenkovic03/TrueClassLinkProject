@@ -28,7 +28,7 @@ class EleveList: ObservableObject{
             print(newEleve.name)
             print(newEleve.mdp)
             print(newEleve.email)
-           print(newEleve.surname)
+            print(newEleve.surname)
             print(newEleve.classe.name)
             return newEleve
             
@@ -41,5 +41,4 @@ class EleveList: ObservableObject{
     func eleveExists(email: String, mdp: String) -> Bool {
         return listeEleve.contains(where: { $0.email == email && $0.mdp == mdp})
     }
-
 }
