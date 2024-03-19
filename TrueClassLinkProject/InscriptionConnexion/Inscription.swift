@@ -15,7 +15,7 @@ struct Inscription: View {
     @State private var password: String = ""
     @State private var selectedClass: Classes?
     @State private var selectedClassIndex = 0
-    let eleveList = EleveList()
+    var eleveList = EleveList()
     @State private var isModalVisible = false
     @State private var navigateToConnexion = false
     @State private var fillAllFieldsError = false
@@ -33,8 +33,8 @@ struct Inscription: View {
         } else {
             if (eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) != nil) {
                 navigateToConnexion = true
-                }
             }
+        }
     }
    
     @ObservedObject var listeClasses = ListeClasses()
@@ -123,7 +123,7 @@ struct Inscription: View {
                .navigationBarHidden(navigateToConnexion) // Masquer la barre de navigation si nous naviguons vers la page de connexion
                            .background(
                                NavigationLink(
-                                   destination: Connexion(), // Remplacez Connexion par le nom de votre vue de connexion
+                                destination: Connexion(eleveList: eleveList), // Remplacez Connexion par le nom de votre vue de connexion
                                    isActive: $navigateToConnexion,
                                    label: {
                                        EmptyView()

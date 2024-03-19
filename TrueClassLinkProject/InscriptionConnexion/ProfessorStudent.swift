@@ -36,7 +36,7 @@ struct ProfessorStudent: View {
                     if userChoice.didChooseInscription {
                         Inscription()
                     } else {
-                        Connexion()
+                        Connexion(eleveList: EleveList())
                     }
                 }
                 CustomButton2(text: "Elève", width: 200, height: 50, cornerRadius: 30, action: {
@@ -47,7 +47,7 @@ struct ProfessorStudent: View {
                     if userChoice.didChooseInscription {
                         Inscription()
                     } else {
-                        Connexion()
+                        Connexion(eleveList: EleveList())
                     }
                 }
             }
