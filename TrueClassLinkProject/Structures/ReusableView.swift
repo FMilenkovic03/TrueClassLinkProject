@@ -43,11 +43,13 @@ struct CustomButton2: View {
 
 /// A tab view bar.
 struct tabViewBar: View {
+    var hist: MessageHistorique
+    var message: Message
     var body: some View {
         TabView {
             CourseChoice()
                 .tabItem {Label("Accueil", systemImage: "house")}
-            QuestionClass()
+            QuestionClass(message: message, hist: hist)
                 .tabItem {Label("Questions", systemImage: "bell")}
             Profile()
                 .tabItem {Label("Profile", systemImage: "gear")

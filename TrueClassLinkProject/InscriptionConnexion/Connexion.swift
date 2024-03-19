@@ -47,8 +47,8 @@ struct Connexion: View {
                             Alert(title: Text("Erreur"), message: Text("Veuillez entrer un email et un mot de passe valides"), dismissButton: .default(Text("OK")))
                         }
                         .padding()
-                        .navigationDestination(isPresented: $navigate, destination: {
-                            CourseChoice()})
+//                        .navigationDestination(isPresented: $navigate, destination: {
+//                            CourseChoice()})
                         
                     }
                     Spacer()

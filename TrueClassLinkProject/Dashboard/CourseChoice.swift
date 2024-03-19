@@ -27,14 +27,14 @@ struct CourseChoice: View {
                      VStack{
                          HStack{
                              Spacer()
-                             NavigationLink(destination: CoursView()){
-                                 OrangeBigButton(text: "Français", imageButton: Image("vector")
-                                 )}
+//                             NavigationLink(destination: CoursView()){
+//                                 OrangeBigButton(text: "Français", imageButton: Image("vector")
+//                                 )}
                              Spacer()
                              
-                             NavigationLink(destination: AnglaisView()){
-                                 OrangeBigButton(text: "Anglais", imageButton: Image("vector")
-                                 )}
+//                             NavigationLink(destination: AnglaisView()){
+//                                 OrangeBigButton(text: "Anglais", imageButton: Image("vector")
+//                                 )}
                              Spacer()
                          }
                          
@@ -45,9 +45,9 @@ struct CourseChoice: View {
                              )}
                             Spacer()
                              
-                             NavigationLink(destination: MathsView()){
-                                 OrangeBigButton(text: "Maths", imageButton: Image("vector")
-                                 )}
+//                             NavigationLink(destination: MathsView()){
+//                                 OrangeBigButton(text: "Maths", imageButton: Image("vector")
+//                                 )}
                              Spacer()
                          }
                          .padding(.top, 20)

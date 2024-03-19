@@ -8,11 +8,66 @@
 import SwiftUI
 
 struct QuestionClass: View {
+    @ObservedObject var message: Message
+    @ObservedObject var hist: MessageHistorique
+    @State var textArea: String = ""
+    @State var selectedType: TypeQuestion?
+    @State private var showModal: Bool = false
+    @State private var clickedType: TypeQuestion?
+    @ObservedObject var currentProfile: User = User(email: "ff", mdp: "dd", name: "Vache", surname: "Julie")
+    @ObservedObject var destinaire: Prof = Prof(email: "", mdp: "", name: "Kowalski", surname:"Pierre", classesProf: [Classes(name: "2nd")], discipline: [.svt])
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationStack{
+            ZStack{
+                Image("backgroundBase")
+                    .resizable()
+                    .ignoresSafeArea()
+                VStack{
+                    ForEach(TypeQuestion.allCases, id: \.rawValue) { type in
+                        Button(action: {
+                            selectedType = type
+                            message.setTypeQuestion(type: type)
+                            showModal.toggle()
+                            clickedType = type
+                        }) {
+                            Text(type.rawValue)
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .frame(width: 200, height: 50)
+                                .background(.orangeEdu)
+                                .opacity(clickedType == type || clickedType == nil ? 1.0 : 0.5)
+                                .cornerRadius(10)
+                                .padding()
+                        }
+                       
+                    }
+                    .sheet(isPresented: $showModal) {
+                        if let type = selectedType {
+                        QuestionClassModale(selectedType: type, message: Message(auteur: currentProfile, destinaire: destinaire, typeQuestion: type, message: textArea), hist: hist)
+                        }
+                        
+                    }
+                    NavigationLink(destination: QuestionHistory(messageHistorique: hist)){
+                        Text("coucou")
+                    }
+                    Button(action: {
+                        print(hist.historique.count)
+                    }, label: {
+                        Text("Button")
+                    })
+                    
+                }
+            }
+            .navigationTitle("Poser une question")
+        }
+        
     }
 }
 
 #Preview {
-    QuestionClass()
+    QuestionClass(message: Message(auteur: User(email: "", mdp: "", name: "", surname: ""), destinaire: User(email: "", mdp: "", name: "", surname: ""), typeQuestion: .poserQuest, message: ""), hist: MessageHistorique())
 }
+
+
+

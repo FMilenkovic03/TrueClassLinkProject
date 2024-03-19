@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C35AC9C82BA998F00085B73A /* QuestionClassModale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35AC9C72BA998F00085B73A /* QuestionClassModale.swift */; };
 		C36BDABD2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BDABC2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift */; };
 		C36BDAC12BA0886800E7EF19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BDAC02BA0886800E7EF19 /* Assets.xcassets */; };
 		C36BDAC42BA0886800E7EF19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BDAC32BA0886800E7EF19 /* Preview Assets.xcassets */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C35AC9C72BA998F00085B73A /* QuestionClassModale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionClassModale.swift; sourceTree = "<group>"; };
 		C36BDAB92BA0886700E7EF19 /* TrueClassLinkProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrueClassLinkProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36BDABC2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueClassLinkProjectApp.swift; sourceTree = "<group>"; };
 		C36BDAC02BA0886800E7EF19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				C36BDB252BA08B6300E7EF19 /* CourseChoice.swift */,
 				C36BDB272BA08B9200E7EF19 /* Tendances.swift */,
 				C36BDB292BA08BAB00E7EF19 /* QuestionClass.swift */,
+				C35AC9C72BA998F00085B73A /* QuestionClassModale.swift */,
 				C36BDB2B2BA08C5600E7EF19 /* Profile.swift */,
 			);
 			path = Dashboard;
@@ -305,8 +308,6 @@
 				C3D54F092BA49C0D005EFE18 /* MathsQA.swift */,
 				C3D54F072BA49C06005EFE18 /* AnglaisView.swift */,
 				C36BDB3D2BA08D2900E7EF19 /* RessourcesView.swift */,
-				C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */,
-				C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */,
 			);
 			path = CourseChoiceChild;
 			sourceTree = "<group>";
@@ -325,6 +326,8 @@
 		C36BDB232BA08B3100E7EF19 /* QuestionChild */ = {
 			isa = PBXGroup;
 			children = (
+				C36BDB3F2BA08D3600E7EF19 /* QuestionHistory.swift */,
+				C36BDB412BA08D4400E7EF19 /* QuestionAnswer.swift */,
 				C36BDB332BA08CC100E7EF19 /* OccurentQuestion.swift */,
 				C36BDB352BA08CCB00E7EF19 /* QuestionFeedback.swift */,
 			);
@@ -461,6 +464,7 @@
 				C3D54F1C2BA49C6D005EFE18 /* MathsView.swift in Sources */,
 				C36BDAE42BA0892F00E7EF19 /* ProfList.swift in Sources */,
 				C36BDB402BA08D3600E7EF19 /* QuestionHistory.swift in Sources */,
+				C35AC9C82BA998F00085B73A /* QuestionClassModale.swift in Sources */,
 				C36BDADE2BA0892F00E7EF19 /* TestDiagnostique.swift in Sources */,
 				C3BCAE4B2BA2F557002DC5D0 /* UsersProfiles_Added.swift in Sources */,
 				C3D54F0C2BA49C17005EFE18 /* FrenchQA.swift in Sources */,
