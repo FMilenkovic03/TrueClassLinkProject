@@ -29,7 +29,7 @@ struct EnglishVid: View {
                             .foregroundStyle(.gray)
                             .contrast(7.3)
                         NavigationLink("The UK Education System", destination: WebView(url: URL(string: "https://www.youtube.com/watch?v=glOSCymI6AQ")!))
-                           // .padding(.top, 100)
+                        // .padding(.top, 100)
                             .font(.custom("SFPro-bold", size: 22))
                             .foregroundStyle(.orangeEdu)
                     }
@@ -41,7 +41,7 @@ struct EnglishVid: View {
                             .foregroundStyle(.gray)
                             .contrast(7.3)
                         NavigationLink("The Canadian \r Education System", destination: WebView(url: URL(string: "https://www.youtube.com/watch?v=yFyWpKYxGCg")!))
-                           // .padding(.top, 100)
+                        // .padding(.top, 100)
                             .font(.custom("SFPro-bold", size: 22))
                             .foregroundStyle(.orangeEdu)
                     }
@@ -53,7 +53,7 @@ struct EnglishVid: View {
                             .foregroundStyle(.gray)
                             .contrast(7.3)
                         NavigationLink("Australia's history", destination: WebView(url: URL(string: "https://www.youtube.com/watch?v=-I2JqaxkaWQ")!))
-                           // .padding(.top, 100)
+                        // .padding(.top, 100)
                             .font(.custom("SFPro-bold", size: 22))
                             .foregroundStyle(.orangeEdu)
                     }
@@ -71,7 +71,7 @@ struct EnglishVid: View {
         }
     }
 }
-    
+
 
 
 #Preview {

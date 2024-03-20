@@ -40,22 +40,22 @@ struct QuestionClass: View {
                                 .cornerRadius(10)
                                 .padding()
                         }
-                       
+                        
                     }
                     .sheet(isPresented: $showModal) {
                         if let type = selectedType {
-                        QuestionClassModale(selectedType: type, message: Message(auteur: currentProfile, destinaire: destinaire, typeQuestion: type, message: textArea), hist: hist)
+                            QuestionClassModale(selectedType: type, message: Message(auteur: currentProfile, destinaire: destinaire, typeQuestion: type, message: textArea), hist: hist)
                         }
                         
                     }
-//                    NavigationLink(destination: QuestionHistory(messageHistorique: hist)){
-//                        Text("coucou")
-//                    }
-//                    Button(action: {
-//                        print(hist.historique.count)
-//                    }, label: {
-//                        Text("Button")
-//                    })
+                    //                    NavigationLink(destination: QuestionHistory(messageHistorique: hist)){
+                    //                        Text("coucou")
+                    //                    }
+                    //                    Button(action: {
+                    //                        print(hist.historique.count)
+                    //                    }, label: {
+                    //                        Text("Button")
+                    //                    })
                     
                 }
             }

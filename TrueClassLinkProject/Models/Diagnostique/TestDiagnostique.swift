@@ -26,5 +26,5 @@ class testMotivation: Test {
 }
 
 class TestDifficulte: Test {
-   
+    
 }

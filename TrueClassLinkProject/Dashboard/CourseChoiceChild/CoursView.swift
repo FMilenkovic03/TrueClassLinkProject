@@ -23,15 +23,15 @@ struct CoursView: View {
                     NavigationLink(destination: QuestionHistory(messageHistorique: hist)){
                         NonFilledOrangeButton(text: "Historique ", imageButton: Image(systemName: "doc.questionmark"))
                             .fontWeight(.semibold)
-                        .font(.custom("SFPro-bold", size: 23))
-
+                            .font(.custom("SFPro-bold", size: 23))
+                        
                     }
                     .padding(.top, 10)
                     NavigationLink(destination: RessourcesView(courseName: coursName)){
-                     NonFilledOrangeButton(text: "Cours ", imageButton: Image(systemName: "book"))
-                          .fontWeight(.semibold)
-                          .font(.custom("SFPro-bold", size: 23))
-                     }
+                        NonFilledOrangeButton(text: "Cours ", imageButton: Image(systemName: "book"))
+                            .fontWeight(.semibold)
+                            .font(.custom("SFPro-bold", size: 23))
+                    }
                     .padding(.top, 10)
                     NavigationLink(destination: QA(coursName: coursName)){
                         NonFilledOrangeButton(text: "Q&A ", imageButton: Image(systemName: "questionmark.bubble"))
@@ -40,12 +40,12 @@ struct CoursView: View {
                     }
                     .padding(.top, 10)
                     NavigationLink(destination: Profile()){
-                          NonFilledOrangeButton(text: "Profil de Mme Martin ", imageButton: Image(systemName: "person.crop.circle"))
-                              .fontWeight(.light)
-                               .fontWeight(.semibold)
-                               .font(.custom("SFPro-bold", size: 23))
-                             }
-                         .padding(.top, 10)
+                        NonFilledOrangeButton(text: "Profil de Mme Martin ", imageButton: Image(systemName: "person.crop.circle"))
+                            .fontWeight(.light)
+                            .fontWeight(.semibold)
+                            .font(.custom("SFPro-bold", size: 23))
+                    }
+                    .padding(.top, 10)
                 }
             }
             

@@ -35,7 +35,7 @@ class EleveList: ObservableObject{
             
         }
         
-            
+        
     }
     
     func eleveExists(email: String, mdp: String) -> Bool {

@@ -9,7 +9,7 @@ struct CustomButton<Destination: View>: View {
     let height: CGFloat
     let cornerRadius: CGFloat
     let destination: Destination
-
+    
     var body: some View {
         NavigationLink(destination: destination){
             Text(text)
@@ -53,9 +53,9 @@ struct tabViewBar: View {
                 .tabItem {Label("Questions", systemImage: "bell")}
             Profile()
                 .tabItem {Label("Profile", systemImage: "gear")
-            Tendances()
-                .tabItem { Label("Tendances", systemImage: "flame") }
-            }
+                    Tendances()
+                        .tabItem { Label("Tendances", systemImage: "flame") }
+                }
         }
     }
 }
@@ -66,44 +66,44 @@ struct OrangeBigButton: View {
     let imageName: String
     
     func xOffsetForText() -> CGFloat {
-            if text.count < 8 {
-                return 40
-            } else if text.count < 15 {
-                return 20 // Ajoutez ou ajustez les conditions selon vos besoins
-            } else {
-                return 8
-            }
+        if text.count < 8 {
+            return 40
+        } else if text.count < 15 {
+            return 20 // Ajoutez ou ajustez les conditions selon vos besoins
+        } else {
+            return 8
         }
+    }
     var body: some View {
-      
-            ZStack {
+        
+        ZStack {
+            Rectangle()
+                .frame(width: 150, height: 120)
+                .foregroundColor(.orangeEdu)
+                .clipShape(RoundedRectangle(cornerRadius: 16.0))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16.0)
+                        .stroke(Color.orangeEdu, lineWidth: 2)
+                )
+            
+            VStack {
                 Rectangle()
-                    .frame(width: 150, height: 120)
-                    .foregroundColor(.orangeEdu)
-                    .clipShape(RoundedRectangle(cornerRadius: 16.0))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16.0)
-                            .stroke(Color.orangeEdu, lineWidth: 2)
-                    )
+                    .frame(width: 75, height: 40)
+                    .foregroundColor(.yellowEdu)
+                    .clipShape(.rect(topLeadingRadius: 0, bottomLeadingRadius: 16, bottomTrailingRadius: 0, topTrailingRadius: 16))
+                    .offset(x: 38, y: -10)
                 
-                VStack {
-                    Rectangle()
-                        .frame(width: 75, height: 40)
-                        .foregroundColor(.yellowEdu)
-                        .clipShape(.rect(topLeadingRadius: 0, bottomLeadingRadius: 16, bottomTrailingRadius: 0, topTrailingRadius: 16))
-                        .offset(x: 38, y: -10)
-                    
-                        Image(systemName: imageName)
-                        .resizable()
-                        .frame(width: 25, height: 25)
-                        .offset(x: -40)
-                        .foregroundColor(.white)
-                    
-                    
-                    Text(text)
-                        .foregroundColor(.white)
-                        .offset(x: xOffsetForText())
-                }
+                Image(systemName: imageName)
+                    .resizable()
+                    .frame(width: 25, height: 25)
+                    .offset(x: -40)
+                    .foregroundColor(.white)
+                
+                
+                Text(text)
+                    .foregroundColor(.white)
+                    .offset(x: xOffsetForText())
+            }
         }
     }
 }
@@ -114,23 +114,23 @@ struct NonFilledOrangeButton: View {
     let imageButton: Image
     
     var body: some View {
-         
-            ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.orangeEdu, lineWidth: 2)
-                    .frame(width: 285,height: 85)
-                
-                HStack {
-                    Text(text)
-                        .foregroundColor(.orangeEdu)
-                        .padding(.leading, 8)
-                    imageButton
-                        .resizable()
-                        .frame(width: 25, height: 25)
-                }
+        
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.orangeEdu, lineWidth: 2)
+                .frame(width: 285,height: 85)
+            
+            HStack {
+                Text(text)
+                    .foregroundColor(.orangeEdu)
+                    .padding(.leading, 8)
+                imageButton
+                    .resizable()
+                    .frame(width: 25, height: 25)
             }
         }
     }
+}
 
 
 /// A button with a question and an answer.
@@ -178,7 +178,7 @@ struct RectangularTogglableButton: View {
                             .fill(isClicked ? Color.orangeEdu : Color.clear)
                             .overlay(Circle().stroke(Color.orangeEdu, lineWidth: 2))
                             .frame(width: 30, height: 30)
-                        }
+                    }
                         .padding(.horizontal)
                     )
             }
@@ -234,7 +234,7 @@ struct ReusableView: View {
         NavigationStack{
             VStack(spacing: 20) {
                 CustomButton(text: "Connexion", width: 350, height: 50, cornerRadius: 30, destination: ReusableView())
-               
+                
                 OrangeBigButton(text: "Physique-Chimie", imageName: "book")
                 NonFilledOrangeButton(text: "Historique", imageButton: Image(systemName: "star"))
                 ButtonAnswer(question: "la question", answer: "la réponse")

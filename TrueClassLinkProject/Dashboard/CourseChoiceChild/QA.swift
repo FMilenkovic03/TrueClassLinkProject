@@ -15,7 +15,7 @@ struct QA: View {
                 .resizable()
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 .scaledToFill()
-        
+            
             VStack{
                 Text("\(coursName) Q&A")
                     .bold()
@@ -32,33 +32,33 @@ struct QA: View {
                 ButtonAnswer(question: "Je n'étais pas là au dernier cours, qu'est-ce que vous avez vu ? \r", answer: "Les mouvements littéraire. Dans les ressources il y a un lien qui te redirige vers un site.")
                     .frame(width: 330, height: 220)
                     .padding(.bottom, 10)
-
+                
             }
         }
     }
-        
-        struct ButtonAnswer: View {
-            let question: String
-            let answer: String
-            
-            var body: some View {
-                VStack {
-                    Text(question)
-                        .fontWeight(.bold) // Mettre uniquement la question en gras
-                        .font(.system(size: 20))
-                    Text(answer)
-                        .font(.custom("SFPro-bold", size: 20))
-                }
-                .padding()
-                .background(.greyEdu)
-                .contrast(2.5)
-                .foregroundColor(.black)
-                .cornerRadius(10)
-            }
-        }
-    }
-        
     
+    struct ButtonAnswer: View {
+        let question: String
+        let answer: String
+        
+        var body: some View {
+            VStack {
+                Text(question)
+                    .fontWeight(.bold) // Mettre uniquement la question en gras
+                    .font(.system(size: 20))
+                Text(answer)
+                    .font(.custom("SFPro-bold", size: 20))
+            }
+            .padding()
+            .background(.greyEdu)
+            .contrast(2.5)
+            .foregroundColor(.black)
+            .cornerRadius(10)
+        }
+    }
+}
+
+
 
 
 #Preview {

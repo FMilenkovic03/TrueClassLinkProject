@@ -21,12 +21,12 @@ struct Inscription: View {
     @State private var fillAllFieldsError = false
     
     func saveAction() {
-           guard let classe = selectedClass else { return }
+        guard let classe = selectedClass else { return }
         
         if name.isEmpty || surname.isEmpty || email.isEmpty || password.isEmpty {
-                  fillAllFieldsError = true
-                  return
-              }
+            fillAllFieldsError = true
+            return
+        }
         
         if eleveList.eleveExists(email: email, mdp: password) {
             emailExistsError = true
@@ -37,124 +37,124 @@ struct Inscription: View {
         }
     }
     
-
-   
-    @ObservedObject var listeClasses = ListeClasses()
-       
-//       init() {
-//           self.listeClasses = listeClasses
-//           self.listeClasses.addClass(className: "2nd1")
-//           self.listeClasses.addClass(className: "2nd2")
-//           self.listeClasses.addClass(className: "2nd3")
-//           self.listeClasses.addClass(className: "1er1")
-//           self.listeClasses.addClass(className: "1er2")
-//           self.listeClasses.addClass(className: "1er3")
-//           self.listeClasses.addClass(className: "Ter1")
-//           self.listeClasses.addClass(className: "Ter2")
-//           self.listeClasses.addClass(className: "Ter3")
-//       }
     
-       
-       var arrayTitle: [String] = ["Nom", "Prenom", "Mail", "Mot de passe"]
-        @State private var emailExistsError = false
-
+    
+    @ObservedObject var listeClasses = ListeClasses()
+    
+    //       init() {
+    //           self.listeClasses = listeClasses
+    //           self.listeClasses.addClass(className: "2nd1")
+    //           self.listeClasses.addClass(className: "2nd2")
+    //           self.listeClasses.addClass(className: "2nd3")
+    //           self.listeClasses.addClass(className: "1er1")
+    //           self.listeClasses.addClass(className: "1er2")
+    //           self.listeClasses.addClass(className: "1er3")
+    //           self.listeClasses.addClass(className: "Ter1")
+    //           self.listeClasses.addClass(className: "Ter2")
+    //           self.listeClasses.addClass(className: "Ter3")
+    //       }
+    
+    
+    var arrayTitle: [String] = ["Nom", "Prenom", "Mail", "Mot de passe"]
+    @State private var emailExistsError = false
+    
     var hist: MessageHistorique
     
-       var body: some View {
-           NavigationStack{
-               ZStack{
-                   Image("backgroundBase")
-                       .resizable()
-                       .ignoresSafeArea()
-                   VStack {
-                       ForEach(arrayTitle, id: \.self){ title in
-                       if title == "Mot de passe" {
-                           SecureFieldView(text: textForTitle(title), title: title)
-                          } else {
-                           TextFieldView(text: textForTitle(title), title: title)
-                          }   
-                       }
-                       
-                       Button(action: {
-                           isModalVisible.toggle()
-                       }) {
-                           Text(selectedClass?.name ?? "Classe")
-                               .foregroundColor(selectedClass != nil ? .black : .gray)
-                               .padding(.trailing, 270)
-                               .padding(.bottom, 5)
-                               .overlay(
+    var body: some View {
+        NavigationStack{
+            ZStack{
+                Image("backgroundBase")
+                    .resizable()
+                    .ignoresSafeArea()
+                VStack {
+                    ForEach(arrayTitle, id: \.self){ title in
+                        if title == "Mot de passe" {
+                            SecureFieldView(text: textForTitle(title), title: title)
+                        } else {
+                            TextFieldView(text: textForTitle(title), title: title)
+                        }
+                    }
+                    
+                    Button(action: {
+                        isModalVisible.toggle()
+                    }) {
+                        Text(selectedClass?.name ?? "Classe")
+                            .foregroundColor(selectedClass != nil ? .black : .gray)
+                            .padding(.trailing, 270)
+                            .padding(.bottom, 5)
+                            .overlay(
                                 Rectangle()
                                     .frame(width: 340, height: 1)
                                     .padding(.horizontal)
                                     .foregroundColor(.gray), // Change the color as needed
                                 alignment: .bottom
-                               )
-                       }
-                       .sheet(isPresented: $isModalVisible) {
-                           ModalPicker(selectedClassIndex: $selectedClassIndex, listeClasses: listeClasses, selectedClass: $selectedClass)                             }
-                       
-                       //Spacer()
-                       
-                       .padding()
-                       
-                       Button(action: {
-                           
-                           saveAction()
-                       }, label: {
-                           Text("Enregistrer")
-                               .foregroundColor(.white)
-                               .font(.headline)
-                               .frame(width: 200, height: 50)
-                               .background(.orange)
-                               .cornerRadius(30)
-                       })
-                       
-                       if fillAllFieldsError {
-                                               Text("Veuillez remplir tous les champs.")
-                                                   .foregroundColor(.red)
-                                                   .padding()
-                                           }
-                       
-                       else if emailExistsError {
-                           Text("L'adresse e-mail existe déjà dans la base.")
-                               .foregroundColor(.red)
-                               .padding()
-                       }
-                       
-                   }
-               }
-               .navigationTitle("Inscription")
-               .navigationBarHidden(navigateToConnexion) // Masquer la barre de navigation si nous naviguons vers la page de connexion
-                           .background(
-                               NavigationLink(
-                                destination: Connexion(eleveList: eleveList, hist: hist), // Remplacez Connexion par le nom de votre vue de connexion
-                                   isActive: $navigateToConnexion,
-                                   label: {
-                                       EmptyView()
-                                   })
-                           )
-                           .onAppear {
-                               emailExistsError = false
-                               fillAllFieldsError = false
-                            }
-           }
-       }
-       
-       func textForTitle(_ title: String) -> Binding<String> {
-           switch title {
-           case "Nom":
-               return $name
-           case "Prenom":
-               return $surname
-           case "Mail":
-               return $email
-           case "Mot de passe":
-               return $password
-           default:
-               return .constant("") // Default binding
-           }
-       }
-   }
+                            )
+                    }
+                    .sheet(isPresented: $isModalVisible) {
+                        ModalPicker(selectedClassIndex: $selectedClassIndex, listeClasses: listeClasses, selectedClass: $selectedClass)                             }
+                    
+                    //Spacer()
+                    
+                    .padding()
+                    
+                    Button(action: {
+                        
+                        saveAction()
+                    }, label: {
+                        Text("Enregistrer")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                            .frame(width: 200, height: 50)
+                            .background(.orange)
+                            .cornerRadius(30)
+                    })
+                    
+                    if fillAllFieldsError {
+                        Text("Veuillez remplir tous les champs.")
+                            .foregroundColor(.red)
+                            .padding()
+                    }
+                    
+                    else if emailExistsError {
+                        Text("L'adresse e-mail existe déjà dans la base.")
+                            .foregroundColor(.red)
+                            .padding()
+                    }
+                    
+                }
+            }
+            .navigationTitle("Inscription")
+            .navigationBarHidden(navigateToConnexion) // Masquer la barre de navigation si nous naviguons vers la page de connexion
+            .background(
+                NavigationLink(
+                    destination: Connexion(eleveList: eleveList, hist: hist), // Remplacez Connexion par le nom de votre vue de connexion
+                    isActive: $navigateToConnexion,
+                    label: {
+                        EmptyView()
+                    })
+            )
+            .onAppear {
+                emailExistsError = false
+                fillAllFieldsError = false
+            }
+        }
+    }
+    
+    func textForTitle(_ title: String) -> Binding<String> {
+        switch title {
+        case "Nom":
+            return $name
+        case "Prenom":
+            return $surname
+        case "Mail":
+            return $email
+        case "Mot de passe":
+            return $password
+        default:
+            return .constant("") // Default binding
+        }
+    }
+}
 
 
 #Preview {

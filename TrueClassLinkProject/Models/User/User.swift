@@ -86,14 +86,14 @@ class User: ObservableObject {
     func addHobby(oneHobby: Hobby) -> [Hobby] {
         self.hobby.append(oneHobby)
         return hobby
-        }
+    }
     
     
     func removeOne(removedHobby: Hobby) -> [Hobby] {
         if let index = hobby.firstIndex(of: removedHobby) {
             self.hobby.remove(at: index)
         }
-            return hobby
+        return hobby
     }
     func countHobby(countedHobby: [Hobby]) -> Int {
         let count = hobby.count

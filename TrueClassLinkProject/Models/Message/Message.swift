@@ -37,28 +37,28 @@ class Message: ObservableObject , Identifiable{
     
     
     func toggleAnonyme() {
-           anonyme.toggle()
+        anonyme.toggle()
         print(anonyme)
-       }
+    }
     
     func setTypeQuestion(type: TypeQuestion){
-            self.typeQuestion = type
+        self.typeQuestion = type
         print(typeQuestion)
-        }
+    }
     
     func messageContent(messageContent: String){
         self.message = messageContent
     }
     
-//    func sendMessage(auteur: User, destinaire: User, messageText: String) {
-//           let newMessage = Message(auteur: self.auteur, destinaire: self.destinaire, typeQuestion: self.typeQuestion, message: messageText)
-//           MessageHistorique.shared.newMessage(message: newMessage)
-//        print(newMessage.auteur.name)
-//        print(newMessage.destinaire.name)
-//        print(newMessage.typeQuestion)
-//        print(newMessage.message)
-//        print(newMessage.anonyme)
-//        print(MessageHistorique.shared.historique.count)
-//       }
+    //    func sendMessage(auteur: User, destinaire: User, messageText: String) {
+    //           let newMessage = Message(auteur: self.auteur, destinaire: self.destinaire, typeQuestion: self.typeQuestion, message: messageText)
+    //           MessageHistorique.shared.newMessage(message: newMessage)
+    //        print(newMessage.auteur.name)
+    //        print(newMessage.destinaire.name)
+    //        print(newMessage.typeQuestion)
+    //        print(newMessage.message)
+    //        print(newMessage.anonyme)
+    //        print(MessageHistorique.shared.historique.count)
+    //       }
     
 }
