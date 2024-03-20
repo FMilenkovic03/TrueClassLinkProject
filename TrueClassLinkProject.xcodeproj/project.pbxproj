@@ -69,6 +69,12 @@
 		C3F09B282BAAEC5200494857 /* DepartNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B272BAAEC5200494857 /* DepartNavView.swift */; };
 		C3F09B2A2BAAEC5C00494857 /* DiagChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B292BAAEC5C00494857 /* DiagChart.swift */; };
 		C3F09B2C2BAAEC6600494857 /* DiagChart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B2B2BAAEC6600494857 /* DiagChart2.swift */; };
+		C3F09B342BAAEE9600494857 /* CheckRythme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B2D2BAAEE9600494857 /* CheckRythme.swift */; };
+		C3F09B352BAAEE9700494857 /* ProfViewOSEF.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B2E2BAAEE9600494857 /* ProfViewOSEF.swift */; };
+		C3F09B362BAAEE9700494857 /* QuestionLibre.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B2F2BAAEE9600494857 /* QuestionLibre.swift */; };
+		C3F09B372BAAEE9700494857 /* QuestionsEleves.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B302BAAEE9600494857 /* QuestionsEleves.swift */; };
+		C3F09B382BAAEE9700494857 /* QuestionsPreparees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B312BAAEE9600494857 /* QuestionsPreparees.swift */; };
+		C3F09B392BAAEE9700494857 /* QuizRevolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B322BAAEE9600494857 /* QuizRevolution.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +141,12 @@
 		C3F09B272BAAEC5200494857 /* DepartNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartNavView.swift; sourceTree = "<group>"; };
 		C3F09B292BAAEC5C00494857 /* DiagChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagChart.swift; sourceTree = "<group>"; };
 		C3F09B2B2BAAEC6600494857 /* DiagChart2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagChart2.swift; sourceTree = "<group>"; };
+		C3F09B2D2BAAEE9600494857 /* CheckRythme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckRythme.swift; sourceTree = "<group>"; };
+		C3F09B2E2BAAEE9600494857 /* ProfViewOSEF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfViewOSEF.swift; sourceTree = "<group>"; };
+		C3F09B2F2BAAEE9600494857 /* QuestionLibre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionLibre.swift; sourceTree = "<group>"; };
+		C3F09B302BAAEE9600494857 /* QuestionsEleves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsEleves.swift; sourceTree = "<group>"; };
+		C3F09B312BAAEE9600494857 /* QuestionsPreparees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsPreparees.swift; sourceTree = "<group>"; };
+		C3F09B322BAAEE9600494857 /* QuizRevolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizRevolution.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +179,7 @@
 		C36BDABB2BA0886700E7EF19 /* TrueClassLinkProject */ = {
 			isa = PBXGroup;
 			children = (
+				C3F09B332BAAEE9600494857 /* Prof */,
 				C36BDB0C2BA089FB00E7EF19 /* Structures */,
 				C36BDB0B2BA089D900E7EF19 /* Diagnostic */,
 				C36BDB0A2BA089C900E7EF19 /* InscriptionConnexion */,
@@ -361,6 +374,19 @@
 			path = ProfileChildViewAdded;
 			sourceTree = "<group>";
 		};
+		C3F09B332BAAEE9600494857 /* Prof */ = {
+			isa = PBXGroup;
+			children = (
+				C3F09B2D2BAAEE9600494857 /* CheckRythme.swift */,
+				C3F09B2E2BAAEE9600494857 /* ProfViewOSEF.swift */,
+				C3F09B2F2BAAEE9600494857 /* QuestionLibre.swift */,
+				C3F09B302BAAEE9600494857 /* QuestionsEleves.swift */,
+				C3F09B312BAAEE9600494857 /* QuestionsPreparees.swift */,
+				C3F09B322BAAEE9600494857 /* QuizRevolution.swift */,
+			);
+			path = Prof;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -451,6 +477,7 @@
 				C35AC9D42BA9C1BD0085B73A /* PageProfilComplete.swift in Sources */,
 				C36BDB1A2BA08AC300E7EF19 /* InscriptionConnexion.swift in Sources */,
 				C36BDB142BA08A6F00E7EF19 /* DiagExpectations.swift in Sources */,
+				C3F09B382BAAEE9700494857 /* QuestionsPreparees.swift in Sources */,
 				C36BDAE12BA0892F00E7EF19 /* Eleve.swift in Sources */,
 				C36BDB342BA08CC100E7EF19 /* OccurentQuestion.swift in Sources */,
 				C36BDB1E2BA08AFE00E7EF19 /* Connexion.swift in Sources */,
@@ -462,14 +489,18 @@
 				C36BDADC2BA0892F00E7EF19 /* Cours.swift in Sources */,
 				C36BDB162BA08A8600E7EF19 /* DiagDifficulties.swift in Sources */,
 				C36BDAE32BA0892F00E7EF19 /* Prof.swift in Sources */,
+				C3F09B372BAAEE9700494857 /* QuestionsEleves.swift in Sources */,
+				C3F09B392BAAEE9700494857 /* QuizRevolution.swift in Sources */,
 				C36BDAE22BA0892F00E7EF19 /* EleveList.swift in Sources */,
 				C3D54F182BA49C61005EFE18 /* CoursView.swift in Sources */,
 				C3D54F162BA49C52005EFE18 /* MathsExo.swift in Sources */,
+				C3F09B342BAAEE9600494857 /* CheckRythme.swift in Sources */,
 				C36BDAE02BA0892F00E7EF19 /* MessageHistorique.swift in Sources */,
 				C36BDAE42BA0892F00E7EF19 /* ProfList.swift in Sources */,
 				C36BDB402BA08D3600E7EF19 /* QuestionHistory.swift in Sources */,
 				C35AC9C82BA998F00085B73A /* QuestionClassModale.swift in Sources */,
 				C36BDADE2BA0892F00E7EF19 /* TestDiagnostique.swift in Sources */,
+				C3F09B352BAAEE9700494857 /* ProfViewOSEF.swift in Sources */,
 				C3BCAE4B2BA2F557002DC5D0 /* UsersProfiles_Added.swift in Sources */,
 				C36BDB322BA08C9D00E7EF19 /* TendanceSchool.swift in Sources */,
 				C35AC9D22BA9C1730085B73A /* ProfileHobbiesRectangleView.swift in Sources */,
@@ -491,6 +522,7 @@
 				C36BDB3A2BA08CEF00E7EF19 /* DiagnosticView.swift in Sources */,
 				C36BDB422BA08D4400E7EF19 /* QuestionAnswer.swift in Sources */,
 				C3E1B95C2BA48A0F00140747 /* DMButtonView.swift in Sources */,
+				C3F09B362BAAEE9700494857 /* QuestionLibre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
