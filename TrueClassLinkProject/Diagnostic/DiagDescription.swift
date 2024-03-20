@@ -106,7 +106,7 @@ struct DiagDescription: View {
         }
     }
 }
-        #Preview {
-            DiagDescription()
-        }
-        
+#Preview {
+    DiagDescription()
+}
+

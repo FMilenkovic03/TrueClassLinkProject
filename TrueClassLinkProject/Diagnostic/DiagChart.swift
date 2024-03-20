@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DiagChartView: View {
     
-        @State private var selectedCategoryIndex: Int? = nil
+    @State private var selectedCategoryIndex: Int? = nil
     
     let data: [(String, Double)]
     @State private var isPopupOpen = false
@@ -112,27 +112,27 @@ struct DiagChart: View {
                     
                     ScrollView {
                         
-                            VStack {
-                                Text("Statistiques des classes")
-                                    .font(.custom("SF Pro-Bold", size: 22))
-                                    .foregroundColor(Color.orangeEdu)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .padding(.top, 30)
-                                
-                                DiagChartView(data: [("Difficultés", 80), ("Attentes", 65), ("Motivations", 40), ("Orientation", 25)])
-                                    .padding(.top, 140)
-                                
-                                Text("Facteurs de risque")
-                                    .font(.custom("SF Pro-Bold", size: 22))
-                                    .foregroundColor(Color.orangeEdu)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .padding(.top, -100)
-                                
-                                DiagChart2View()
-                                    .padding(.top, -60)
-                            }
-//                            .offset(x: 0, y: 230)
+                        VStack {
+                            Text("Statistiques des classes")
+                                .font(.custom("SF Pro-Bold", size: 22))
+                                .foregroundColor(Color.orangeEdu)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding(.top, 30)
+                            
+                            DiagChartView(data: [("Difficultés", 80), ("Attentes", 65), ("Motivations", 40), ("Orientation", 25)])
+                                .padding(.top, 140)
+                            
+                            Text("Facteurs de risque")
+                                .font(.custom("SF Pro-Bold", size: 22))
+                                .foregroundColor(Color.orangeEdu)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding(.top, -100)
+                            
+                            DiagChart2View()
+                                .padding(.top, -60)
                         }
+                        //                            .offset(x: 0, y: 230)
+                    }
                 }
             }
         }

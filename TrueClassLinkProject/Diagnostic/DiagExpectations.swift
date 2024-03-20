@@ -8,50 +8,50 @@
 import SwiftUI
 
 class ExpectationsViewModel: ObservableObject {
-
+    
     @Published var expectations: [Expectations] = [
-
+        
         Expectations(question: "Quelles sont tes attentes par rapport à l’école ?", options: [
-
+            
             "M’aider à choisir mon parcours et mon orientation",
-
+            
             "Être conseillé.e en cas de difficulté",
-
+            
             "Trouver un métier au plus vite",
-
+            
             "Autres (explique ici tes autres attentes",
-
-           
-
+            
+            
+            
         ]),
-
+        
         Expectations(question: "Quelles sont les aides dont tu aimerais bénéficier ?", options: [
-
+            
             "J’aimerais pouvoir parler avec une personne de confiance",
-
+            
             "J’aimerais une sorte de tutorat entre élèves pour les devoirs",
-
+            
             "J’aimerais que l’école mette en place des dispositifs d’accessibilité",
-
+            
             "J’aimerais qu’il y ait davantage de projets scolaires dans la classe ou l’établissement",
-
-
+            
+            
         ])
-
+        
     ]
-
-   
-
+    
+    
+    
     func selectOption(questionIndex: Int, optionIndex: Int) {
-
+        
         expectations[questionIndex].options[optionIndex].isSelected.toggle()
-
+        
     }
-
-   
-
+    
+    
+    
     func validate() -> Bool {
-
+        
         // ici logique de validation
         for expectations in expectations {
             for option in expectations.options {
@@ -60,39 +60,39 @@ class ExpectationsViewModel: ObservableObject {
                 }
             }
         }
-
+        
         return true
-
+        
     }
-
+    
 }
 
- 
+
 
 // Définition de la structure Motivation
 
 struct Expectations {
-
+    
     let question: String
     var options: [Option]
-
-   
-
+    
+    
+    
     init(question: String, options: [String]) {
         self.question = question
         self.options = options.map { Option(text: $0) }
-
+        
     }
-
+    
 }
 
 // Définition de la structure Option
 
 struct Myoption {
-
+    
     let text: String
     var isSelected: Bool = false
-
+    
 }
 
 // Définition de la vue principale
@@ -133,12 +133,12 @@ struct DiagExpectations: View {
                             QuestionListView(viewModel: viewModel, selection: $selection)
                                 .tag(1)
                             
-//                            Text("Tes attentes")
-//                                .tag(2)
-//                            Text("Tes difficultés")
-//                                .tag(1)
-//                            QuestionListView(viewModel: viewModel, selection: $selection)
-//                                .tag(0)
+                            //                            Text("Tes attentes")
+                            //                                .tag(2)
+                            //                            Text("Tes difficultés")
+                            //                                .tag(1)
+                            //                            QuestionListView(viewModel: viewModel, selection: $selection)
+                            //                                .tag(0)
                         }
                         .gesture(DragGesture().onEnded { gesture in
                             //                if gesture.translation.width > 100 && selection > 0 {

@@ -8,84 +8,84 @@
 import SwiftUI
 
 //struct DiagDifficulties: View {
-    class DifficultiesViewModel: ObservableObject {
-
-        @Published var difficulties: [Difficulties] = [
-
-            Difficulties(question: "Pour ce qui est d’apprendre, as-tu des difficultés?", options: [
-
-                "Tout se passe bien",
-
-                "J’ai des difficultés pour me concentrer",
-
-                "Les cours ne sont pas adaptés à mes besoins",
-
-                "J’aimerais prendre part à des projets plus concrets",
-                "Je ne me sens pas aidé.e quand je suis en difficulté",
-                "Autre (indique ici tes autres freins)"
-
-            ]),
-
-            Difficulties(question: "Comment te sens-tu par rapport aux autres ?", options: [
-
-                "Je me sens isolé.e",
-
-                "Je suis bien intégré.e, tout se passe bien",
-
-                "Je préfère passer mon temps seul.e, mais ça se passe bien",
-
-                "Je suis harcelé.e",
-
-            ])
-
-        ]
-
-        func selectOption(questionIndex: Int, optionIndex: Int) {
-
-            difficulties[questionIndex].options[optionIndex].isSelected.toggle()
-
-        }
-
-        func validate() -> Bool {
-
-            // ici logique de validation
-            for difficulties in difficulties {
-                for option in difficulties.options {
-                    if option.isSelected {
-                        return false
-                    }
+class DifficultiesViewModel: ObservableObject {
+    
+    @Published var difficulties: [Difficulties] = [
+        
+        Difficulties(question: "Pour ce qui est d’apprendre, as-tu des difficultés?", options: [
+            
+            "Tout se passe bien",
+            
+            "J’ai des difficultés pour me concentrer",
+            
+            "Les cours ne sont pas adaptés à mes besoins",
+            
+            "J’aimerais prendre part à des projets plus concrets",
+            "Je ne me sens pas aidé.e quand je suis en difficulté",
+            "Autre (indique ici tes autres freins)"
+            
+        ]),
+        
+        Difficulties(question: "Comment te sens-tu par rapport aux autres ?", options: [
+            
+            "Je me sens isolé.e",
+            
+            "Je suis bien intégré.e, tout se passe bien",
+            
+            "Je préfère passer mon temps seul.e, mais ça se passe bien",
+            
+            "Je suis harcelé.e",
+            
+        ])
+        
+    ]
+    
+    func selectOption(questionIndex: Int, optionIndex: Int) {
+        
+        difficulties[questionIndex].options[optionIndex].isSelected.toggle()
+        
+    }
+    
+    func validate() -> Bool {
+        
+        // ici logique de validation
+        for difficulties in difficulties {
+            for option in difficulties.options {
+                if option.isSelected {
+                    return false
                 }
             }
-
-            return true
-
         }
+        
+        return true
+        
     }
+}
 
-    // Définition de la structure Difficulties
-    struct Difficulties {
-
-        let question: String
-        var options: [Option]
-
-        init(question: String, options: [String]) {
-            self.question = question
-            self.options = options.map { Option(text: $0) }
-
-        }
-
+// Définition de la structure Difficulties
+struct Difficulties {
+    
+    let question: String
+    var options: [Option]
+    
+    init(question: String, options: [String]) {
+        self.question = question
+        self.options = options.map { Option(text: $0) }
+        
     }
+    
+}
 
-    // Définition de la structure Option
+// Définition de la structure Option
 
-    struct option {
+struct option {
+    
+    let text: String
+    var isSelected: Bool = false
+    
+}
 
-        let text: String
-        var isSelected: Bool = false
-
-    }
-
-    // Définition de la vue principale
+// Définition de la vue principale
 
 struct DiagDifficulties: View {
     
@@ -130,7 +130,7 @@ struct DiagDifficulties: View {
                             selection += 1 /*swipe vers la gauche*/
                         } else if gesture.translation.width > 100 && selection > 0 {
                             //                    if selection == 2 {
-//                            selection -= 1 /*revenir à l'écran 2*/
+                            //                            selection -= 1 /*revenir à l'écran 2*/
                             //                    } else {
                             selection -= 1 /*swipe vers la droite*/
                         }
@@ -141,28 +141,28 @@ struct DiagDifficulties: View {
                     
                     VStack {
                         
-//                        Button(action: {
-//                            //                    if selection < 2 {
-//                            if viewModel.validate() && selection < 2 {
-//                                selection += 1
-//                            }
-//                            withAnimation {
-//                                shouldAnimateButton.toggle()
-//                            }
-//                        }){
-//                            Text("Valider")
-//                                .font(.custom("SFPro-bold", size: 24))
-//                                .foregroundColor(.white)
-//                                .padding()
-//                                .frame(width: 236, height: 60)
-//                                .background(Color.orange)
-//                                .cornerRadius(50)
-//                                .offset(x: 0, y: -20)
-//                        }
-//                        .padding(.bottom)
-//                        .frame(maxWidth: .infinity)
-//                        .scaleEffect(shouldAnimateButton ? 0.8 : 1.0, anchor: .center)
-//                        .animation(.easeInOut(duration: 0.5), value: shouldAnimateButton)
+                        //                        Button(action: {
+                        //                            //                    if selection < 2 {
+                        //                            if viewModel.validate() && selection < 2 {
+                        //                                selection += 1
+                        //                            }
+                        //                            withAnimation {
+                        //                                shouldAnimateButton.toggle()
+                        //                            }
+                        //                        }){
+                        //                            Text("Valider")
+                        //                                .font(.custom("SFPro-bold", size: 24))
+                        //                                .foregroundColor(.white)
+                        //                                .padding()
+                        //                                .frame(width: 236, height: 60)
+                        //                                .background(Color.orange)
+                        //                                .cornerRadius(50)
+                        //                                .offset(x: 0, y: -20)
+                        //                        }
+                        //                        .padding(.bottom)
+                        //                        .frame(maxWidth: .infinity)
+                        //                        .scaleEffect(shouldAnimateButton ? 0.8 : 1.0, anchor: .center)
+                        //                        .animation(.easeInOut(duration: 0.5), value: shouldAnimateButton)
                         
                         HStack(spacing: 20) {
                             ForEach(0..<3) { index in
@@ -275,17 +275,17 @@ struct DiagDifficulties: View {
                             .padding(.trailing)
                             
                         }
-//                            if option.text == "Je suis harcelé.e" {
-//                                TextField("Champ libre", text: $customText)
-//
-//                        }
+                        //                            if option.text == "Je suis harcelé.e" {
+                        //                                TextField("Champ libre", text: $customText)
+                        //
+                        //                        }
                     }
-                            .padding(.horizontal)
-                    }
+                    .padding(.horizontal)
                 }
             }
         }
     }
+}
 
 #Preview {
     DiagDifficulties()
