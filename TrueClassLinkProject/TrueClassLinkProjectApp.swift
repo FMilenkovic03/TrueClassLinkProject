@@ -14,6 +14,8 @@ struct TrueClassLinkProjectApp: App {
         WindowGroup {
             InscriptionConnexion(hist: MessageHistorique(), eleveList: EleveList())
                 .environmentObject(eleveList)
+                .environmentObject(UserChoice())
+                
         }
     }
 }
