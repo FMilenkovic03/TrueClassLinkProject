@@ -11,6 +11,7 @@ struct ProfessorStudent: View {
     @EnvironmentObject var userChoice: UserChoice
     @State private var navigate = false
     var hist: MessageHistorique
+    var mess: Message
     var body: some View {
         ZStack{
             Image("connexionBackground")
@@ -34,7 +35,7 @@ struct ProfessorStudent: View {
                 .padding()
                 .fullScreenCover(isPresented: $navigate) {
                     if userChoice.didChooseInscription {
-                        Inscription(hist: hist)
+                        Inscription(hist: hist, mess: mess)
                     } else {
                         Connexion(eleveList: EleveList(), hist: hist)
                     }
@@ -45,7 +46,7 @@ struct ProfessorStudent: View {
                 .padding()
                 .fullScreenCover(isPresented: $navigate) {
                     if userChoice.didChooseInscription {
-                        Inscription(hist: hist)
+                        Inscription(hist: hist, mess: mess)
                     } else {
                         Connexion(eleveList: EleveList(), hist: hist)
                     }
@@ -56,5 +57,7 @@ struct ProfessorStudent: View {
 }
 
 #Preview {
-    ProfessorStudent(hist: MessageHistorique()).environmentObject(UserChoice())
+    ProfessorStudent(hist: MessageHistorique(), mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: "")).environmentObject(UserChoice())
 }
+
+

@@ -39,7 +39,7 @@ struct InscriptionConnexion: View {
                     })
                     .padding()
                     .fullScreenCover(isPresented: $navigateToProfessorStudent) {
-                        ProfessorStudent(hist: hist)
+                        ProfessorStudent(hist: hist, mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""))
                             .environmentObject(userChoice)
                     }
                     CustomButton2(text: "Connexion", width: 200, height: 50, cornerRadius: 30, action: {
@@ -48,7 +48,7 @@ struct InscriptionConnexion: View {
                     })
                     .padding()
                     .fullScreenCover(isPresented: $navigateToProfessorStudent) {
-                        ProfessorStudent(hist: hist)
+                        ProfessorStudent(hist: hist, mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""))
                             .environmentObject(userChoice)
                     }
                 }

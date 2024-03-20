@@ -75,6 +75,7 @@
 		C3F09B372BAAEE9700494857 /* QuestionsEleves.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B302BAAEE9600494857 /* QuestionsEleves.swift */; };
 		C3F09B382BAAEE9700494857 /* QuestionsPreparees.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B312BAAEE9600494857 /* QuestionsPreparees.swift */; };
 		C3F09B392BAAEE9700494857 /* QuizRevolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B322BAAEE9600494857 /* QuizRevolution.swift */; };
+		C3F09B3B2BAAF71700494857 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B3A2BAAF71700494857 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +148,7 @@
 		C3F09B302BAAEE9600494857 /* QuestionsEleves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsEleves.swift; sourceTree = "<group>"; };
 		C3F09B312BAAEE9600494857 /* QuestionsPreparees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsPreparees.swift; sourceTree = "<group>"; };
 		C3F09B322BAAEE9600494857 /* QuizRevolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizRevolution.swift; sourceTree = "<group>"; };
+		C3F09B3A2BAAF71700494857 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				C36BDB092BA089BA00E7EF19 /* Dashboard */,
 				C36BDADA2BA0892F00E7EF19 /* Models */,
 				C36BDABC2BA0886700E7EF19 /* TrueClassLinkProjectApp.swift */,
+				C3F09B3A2BAAF71700494857 /* MainView.swift */,
 				C36BDAC02BA0886800E7EF19 /* Assets.xcassets */,
 				C36BDAC22BA0886800E7EF19 /* Preview Content */,
 			);
@@ -507,6 +510,7 @@
 				C36BDB2E2BA08C8000E7EF19 /* TendanceBoard.swift in Sources */,
 				C35AC9CA2BA9C0D50085B73A /* ProfileLatelyRectangleView.swift in Sources */,
 				C36BDADB2BA0892F00E7EF19 /* Classes.swift in Sources */,
+				C3F09B3B2BAAF71700494857 /* MainView.swift in Sources */,
 				C36BDB2A2BA08BAB00E7EF19 /* QuestionClass.swift in Sources */,
 				C35AC9CE2BA9C13A0085B73A /* MoodView.swift in Sources */,
 				C36BDB282BA08B9200E7EF19 /* Tendances.swift in Sources */,

@@ -60,6 +60,8 @@ struct Inscription: View {
     
     var hist: MessageHistorique
     
+    var mess: Message
+    
     var body: some View {
         NavigationStack{
             ZStack{
@@ -158,7 +160,7 @@ struct Inscription: View {
 
 
 #Preview {
-    Inscription(hist: MessageHistorique())
+    Inscription(hist: MessageHistorique(), mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""))
 }
 
 struct ModalPicker: View {
