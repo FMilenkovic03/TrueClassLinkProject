@@ -4,6 +4,7 @@
 //
 //  Created by Apprenant98 on 12/03/2024.
 //
+// Modification de la logique d'affichage des cours dynamiquement
 
 import SwiftUI
 
@@ -12,49 +13,39 @@ import SwiftUI
 
 struct RessourcesView: View {
     var courseName: String
+    @ObservedObject var lescours: ListeCours = ListeCours()
+    
     var body: some View {
         NavigationStack{
             ZStack{
                 Image("backgroundBase")
                     .resizable()
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .edgesIgnoringSafeArea(.all)
                     .scaledToFill()
-                
+                ScrollView{
                 VStack{
-                    Text(courseName)
-                        .fontWeight(.medium)
-                        .bold()
-                        .font(.custom("SFPro-bold", size: 30))
-                    //.padding(.bottom, 580)
-                    //
-                    //
-                    OrangeBigButton2(text: "Analyse \r de poème", imageButton: Image(systemName: "folder"))
-                        .padding(.top, 10)
-                        .foregroundStyle(.white)
+//                    Text(courseName)
+//                        .fontWeight(.medium)
+//                        .bold()
+//                        .font(.custom("SFPro-bold", size: 30))
                     
-                    
-                    
-                    OrangeBigButton2(text: "Méthode de \r dissertation", imageButton: Image(systemName: "folder"))
-                        .padding(.top, 10)
-                        .foregroundStyle(.white)
-                    
-                    
-                    
-                    OrangeBigButton2(text: "Histoire de \r la littérature", imageButton: Image(systemName: "folder"))
-                        .padding(.top, 10)
-                        .foregroundStyle(.white)
-                    //
+                        // Filtrer et afficher les cours correspondants
+                        ForEach(lescours.cours.filter { $0.discipline.rawValue == courseName }, id: \.titre) { coursFiltre in
+                            OrangeBigButton2(text: coursFiltre.titre, imageButton: Image(systemName: "book.fill"))
+                                .padding(.top, 10)
+                                .foregroundStyle(.white)
+                        }
+                    }
                 }
-                .padding(.top, 30)
+               .padding(.top, 80)
             }
-            //.navigationTitle(courseName)
         }
     }
 }
 
 
 #Preview {
-    RessourcesView(courseName: "Coucou")
+    RessourcesView(courseName: "SVT")
 }
 
 struct OrangeBigButton2: View, Identifiable  {
@@ -91,7 +82,7 @@ struct OrangeBigButton2: View, Identifiable  {
                     .fontWeight(.semibold)
                     .font(.custom("SFPro-bold", size: 23))
                     .padding(.bottom, 15)
-                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                    .multilineTextAlignment(.leading)
             }
             
         }
