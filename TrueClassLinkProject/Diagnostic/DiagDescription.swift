@@ -16,7 +16,7 @@ struct DiagDescription: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("header")
+                Image("backgroundBase")
                     .resizable()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)

@@ -96,7 +96,7 @@ struct DiagDifficulties: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("header")
+                Image("backgroundBase")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
@@ -129,40 +129,15 @@ struct DiagDifficulties: View {
                         if gesture.translation.width < -100 && selection < 2 {
                             selection += 1 /*swipe vers la gauche*/
                         } else if gesture.translation.width > 100 && selection > 0 {
-                            //                    if selection == 2 {
-                            //                            selection -= 1 /*revenir à l'écran 2*/
-                            //                    } else {
+                            
                             selection -= 1 /*swipe vers la droite*/
                         }
-                        //                                    }
-                        //                                    print("Selection: \(selection)")
+                        
                     })
                     
                     
                     VStack {
                         
-                        //                        Button(action: {
-                        //                            //                    if selection < 2 {
-                        //                            if viewModel.validate() && selection < 2 {
-                        //                                selection += 1
-                        //                            }
-                        //                            withAnimation {
-                        //                                shouldAnimateButton.toggle()
-                        //                            }
-                        //                        }){
-                        //                            Text("Valider")
-                        //                                .font(.custom("SFPro-bold", size: 24))
-                        //                                .foregroundColor(.white)
-                        //                                .padding()
-                        //                                .frame(width: 236, height: 60)
-                        //                                .background(Color.orange)
-                        //                                .cornerRadius(50)
-                        //                                .offset(x: 0, y: -20)
-                        //                        }
-                        //                        .padding(.bottom)
-                        //                        .frame(maxWidth: .infinity)
-                        //                        .scaleEffect(shouldAnimateButton ? 0.8 : 1.0, anchor: .center)
-                        //                        .animation(.easeInOut(duration: 0.5), value: shouldAnimateButton)
                         
                         HStack(spacing: 20) {
                             ForEach(0..<3) { index in
@@ -275,10 +250,7 @@ struct DiagDifficulties: View {
                             .padding(.trailing)
                             
                         }
-                        //                            if option.text == "Je suis harcelé.e" {
-                        //                                TextField("Champ libre", text: $customText)
-                        //
-                        //                        }
+                        
                     }
                     .padding(.horizontal)
                 }

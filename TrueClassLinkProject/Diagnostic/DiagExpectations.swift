@@ -106,7 +106,7 @@ struct DiagExpectations: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("header")
+                Image("backgroundBase")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
@@ -133,12 +133,7 @@ struct DiagExpectations: View {
                             QuestionListView(viewModel: viewModel, selection: $selection)
                                 .tag(1)
                             
-                            //                            Text("Tes attentes")
-                            //                                .tag(2)
-                            //                            Text("Tes difficultés")
-                            //                                .tag(1)
-                            //                            QuestionListView(viewModel: viewModel, selection: $selection)
-                            //                                .tag(0)
+                            
                         }
                         .gesture(DragGesture().onEnded { gesture in
                             //                if gesture.translation.width > 100 && selection > 0 {
@@ -158,28 +153,6 @@ struct DiagExpectations: View {
                         
                         VStack {
                             
-                            //                        Button(action: {
-                            //                            //                    if selection < 2 {
-                            //                            if viewModel.validate() && selection < 2 {
-                            //                                selection += 1
-                            //                            }
-                            //                            withAnimation {
-                            //                                shouldAnimateButton.toggle()
-                            //                            }
-                            //                        }){
-                            //                            Text("Valider")
-                            //                                .font(.custom("SFPro-bold", size: 24))
-                            //                                .foregroundColor(.white)
-                            //                                .padding()
-                            //                                .frame(width: 236, height: 60)
-                            //                                .background(Color.orangeEdu)
-                            //                                .cornerRadius(50)
-                            //                                .offset(x: 0, y: -20)
-                            //                        }
-                            //                        .padding(.bottom)
-                            //                        .frame(maxWidth: .infinity)
-                            //                        .scaleEffect(shouldAnimateButton ? 0.8 : 1.0, anchor: .center)
-                            //                        .animation(.easeInOut(duration: 0.5), value: shouldAnimateButton)
                             
                             HStack(spacing: 20) {
                                 ForEach(0..<3) { index in

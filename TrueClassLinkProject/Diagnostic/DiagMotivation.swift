@@ -83,20 +83,14 @@ struct DiagMotivation: View {
     var body: some View {
         //        NavigationView {
         ZStack {
-            Image("header")
+            Image("backgroundBase")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
                 
-                //                    Text("Tes motivations")
-                //                        .font(.custom("SF Pro", size: 24))
-                //                        .fontWeight(.bold)
-                //                        .foregroundColor(Color.orangeEdu)
-                //                        .frame(maxWidth: .infinity, alignment: .center)
-                //                        .padding(.top,80)
-                //                        .padding(30)
+                
                 
                 TabView(selection: $selection) {
                     DepartNavView()
@@ -109,21 +103,7 @@ struct DiagMotivation: View {
                     QuestionListView(viewModel: viewModel, selection: $selection)
                         .tag(1)
                 }
-                //                    .gesture(DragGesture().onEnded { gesture in
-                //                        //                if gesture.translation.width > 100 && selection > 0 {
-                //                        //                    selection -= 1
-                //                        if gesture.translation.width < -100 && selection < 2 {
-                //                            selection += 1 /*swipe vers la gauche*/
-                //                        } else if gesture.translation.width > 100 && selection > 0 {
-                //                            //                    if selection == 2 {
-                //                            selection -= 1 /*revenir à l'écran 2*/
-                //                            //                    } else {
-                //                            selection -= 1 /*swipe vers la droite*/
-                //                        }
-                //                        //                                    }
-                //                        //                                    print("Selection: \(selection)")
-                //                    })
-                //
+                
                 
                 VStack {
                     

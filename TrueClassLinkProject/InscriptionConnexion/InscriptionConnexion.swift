@@ -57,7 +57,6 @@ struct InscriptionConnexion: View {
     }
 }
 
-
 #Preview {
     InscriptionConnexion(hist: MessageHistorique()).environmentObject(UserChoice())
 }
