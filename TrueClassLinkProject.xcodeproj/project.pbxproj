@@ -66,6 +66,9 @@
 		C3E1B95E2BA48A0F00140747 /* ProfileEditButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B9572BA48A0F00140747 /* ProfileEditButtonView.swift */; };
 		C3E1B9602BA48A0F00140747 /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B9592BA48A0F00140747 /* ProfilePictureView.swift */; };
 		C3E1B9612BA48A0F00140747 /* ProfileTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E1B95A2BA48A0F00140747 /* ProfileTextView.swift */; };
+		C3F09B282BAAEC5200494857 /* DepartNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B272BAAEC5200494857 /* DepartNavView.swift */; };
+		C3F09B2A2BAAEC5C00494857 /* DiagChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B292BAAEC5C00494857 /* DiagChart.swift */; };
+		C3F09B2C2BAAEC6600494857 /* DiagChart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F09B2B2BAAEC6600494857 /* DiagChart2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +132,9 @@
 		C3E1B9572BA48A0F00140747 /* ProfileEditButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditButtonView.swift; sourceTree = "<group>"; };
 		C3E1B9592BA48A0F00140747 /* ProfilePictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
 		C3E1B95A2BA48A0F00140747 /* ProfileTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTextView.swift; sourceTree = "<group>"; };
+		C3F09B272BAAEC5200494857 /* DepartNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartNavView.swift; sourceTree = "<group>"; };
+		C3F09B292BAAEC5C00494857 /* DiagChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagChart.swift; sourceTree = "<group>"; };
+		C3F09B2B2BAAEC6600494857 /* DiagChart2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagChart2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +276,9 @@
 		C36BDB0B2BA089D900E7EF19 /* Diagnostic */ = {
 			isa = PBXGroup;
 			children = (
+				C3F09B2B2BAAEC6600494857 /* DiagChart2.swift */,
+				C3F09B292BAAEC5C00494857 /* DiagChart.swift */,
+				C3F09B272BAAEC5200494857 /* DepartNavView.swift */,
 				C36BDB0F2BA08A4D00E7EF19 /* DiagDescription.swift */,
 				C36BDB112BA08A5900E7EF19 /* DiagMotivation.swift */,
 				C36BDB132BA08A6F00E7EF19 /* DiagExpectations.swift */,
@@ -430,12 +439,15 @@
 				C36BDB102BA08A4D00E7EF19 /* DiagDescription.swift in Sources */,
 				C3D54F0E2BA49C1F005EFE18 /* EnglishVid.swift in Sources */,
 				C36BDADD2BA0892F00E7EF19 /* Question.swift in Sources */,
+				C3F09B2C2BAAEC6600494857 /* DiagChart2.swift in Sources */,
 				C36BDB302BA08C8C00E7EF19 /* TendanceClass.swift in Sources */,
 				C35AC9CC2BA9C0F70085B73A /* MoodListView.swift in Sources */,
+				C3F09B282BAAEC5200494857 /* DepartNavView.swift in Sources */,
 				C36BDB3C2BA08CF900E7EF19 /* SendMessage.swift in Sources */,
 				C3E1B9612BA48A0F00140747 /* ProfileTextView.swift in Sources */,
 				C35AC9D02BA9C15D0085B73A /* PageProfilDiagnostic.swift in Sources */,
 				C36BDB1C2BA08AD300E7EF19 /* ProfessorStudent.swift in Sources */,
+				C3F09B2A2BAAEC5C00494857 /* DiagChart.swift in Sources */,
 				C35AC9D42BA9C1BD0085B73A /* PageProfilComplete.swift in Sources */,
 				C36BDB1A2BA08AC300E7EF19 /* InscriptionConnexion.swift in Sources */,
 				C36BDB142BA08A6F00E7EF19 /* DiagExpectations.swift in Sources */,

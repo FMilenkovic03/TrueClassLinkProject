@@ -13,7 +13,6 @@ struct ProfessorStudent: View {
     var hist: MessageHistorique
     var body: some View {
         ZStack{
-            
             Image("connexionBackground")
                 .resizable()
                 .scaledToFill()
