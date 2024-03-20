@@ -19,6 +19,8 @@ struct Inscription: View {
     @State private var isModalVisible = false
     @State private var navigateToConnexion = false
     @State private var fillAllFieldsError = false
+    @State private var navigateToDiagDescription = false
+    
     
     func saveAction() {
         guard let classe = selectedClass else { return }
@@ -28,8 +30,8 @@ struct Inscription: View {
             return
         }
         
-        if eleveList.eleveExists(email: email, mdp: password) {
-            emailExistsError = true
+        if (eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) != nil) {
+            navigateToDiagDescription = true
         } else {
             if (eleveList.creerEleve(email: email, mdp: password, name: name, surname: surname, classe: classe) != nil) {
                 navigateToConnexion = true
@@ -107,7 +109,7 @@ struct Inscription: View {
                             .foregroundColor(.white)
                             .font(.headline)
                             .frame(width: 200, height: 50)
-                            .background(.orange)
+                            .background(.orangeEdu)
                             .cornerRadius(30)
                     })
                     
@@ -129,8 +131,8 @@ struct Inscription: View {
             .navigationBarHidden(navigateToConnexion) // Masquer la barre de navigation si nous naviguons vers la page de connexion
             .background(
                 NavigationLink(
-                    destination: Connexion(eleveList: eleveList, hist: hist), // Remplacez Connexion par le nom de votre vue de connexion
-                    isActive: $navigateToConnexion,
+                    destination: DiagDescription(), // Remplacez Connexion par DiagDescription
+                    isActive: $navigateToDiagDescription,
                     label: {
                         EmptyView()
                     })

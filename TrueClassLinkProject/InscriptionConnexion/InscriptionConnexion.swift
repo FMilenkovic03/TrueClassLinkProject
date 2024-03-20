@@ -14,7 +14,9 @@ class UserChoice: ObservableObject {
 struct InscriptionConnexion: View {
     @EnvironmentObject var userChoice: UserChoice
     @State private var navigateToProfessorStudent = false
+    @State private var navigateToConnexion = false
     var hist: MessageHistorique
+    var eleveList: EleveList
     var body: some View {
         NavigationView {
             ZStack {
@@ -44,12 +46,11 @@ struct InscriptionConnexion: View {
                     }
                     CustomButton2(text: "Connexion", width: 200, height: 50, cornerRadius: 30, action: {
                         userChoice.didChooseInscription = false
-                        navigateToProfessorStudent = true
+                        navigateToConnexion = true
                     })
                     .padding()
-                    .fullScreenCover(isPresented: $navigateToProfessorStudent) {
-                        ProfessorStudent(hist: hist, mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""))
-                            .environmentObject(userChoice)
+                    .fullScreenCover(isPresented: $navigateToConnexion) {
+                        Connexion(eleveList: eleveList, hist: hist, mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: "")).environmentObject(userChoice)
                     }
                 }
             }
@@ -58,5 +59,5 @@ struct InscriptionConnexion: View {
 }
 
 #Preview {
-    InscriptionConnexion(hist: MessageHistorique()).environmentObject(UserChoice())
+    InscriptionConnexion(hist: MessageHistorique(), eleveList: EleveList()).environmentObject(UserChoice())
 }

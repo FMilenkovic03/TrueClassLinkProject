@@ -12,7 +12,7 @@ struct Connexion: View {
     @State private var showingAlert = false
     
     var hist: MessageHistorique
-    
+    var mess: Message
     
     var body: some View {
         NavigationStack {
@@ -35,7 +35,7 @@ struct Connexion: View {
                     VStack{
                         TextFieldView(text: $user.email, title: "mail")
                         SecureFieldView(text: $user.mdp, title: "password")
-                        CustomButton2(text: "Connexion", width: 150, height: 50, cornerRadius: 30, action: 
+                        CustomButton2(text: "Connexion", width: 150, height: 50, cornerRadius: 30, action:
                                         {
                             if validateCredentials() {
                                 // Trigger navigation
@@ -51,7 +51,7 @@ struct Connexion: View {
                         }
                         .padding()
                         .navigationDestination(isPresented: $navigate, destination: {
-                            CourseChoice(hist: hist)})
+                            MainView(hist: hist, message: mess)})
                         
                     }
                     Spacer()
@@ -76,5 +76,6 @@ struct Connexion: View {
 }
 
 #Preview {
-    Connexion(eleveList: EleveList(), hist: MessageHistorique())
+    Connexion(eleveList: EleveList(), hist: MessageHistorique(), mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""))
 }
+

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ProfessorStudent: View {
     @EnvironmentObject var userChoice: UserChoice
-    @State private var navigate = false
+    @State private var navigateProfessor:Bool = false
+    @State private var navigateEleve:Bool = false
     var hist: MessageHistorique
     var mess: Message
     var body: some View {
@@ -30,26 +31,18 @@ struct ProfessorStudent: View {
                 Spacer()
                     .frame(height: 50)
                 CustomButton2(text: "Professeur", width: 200, height: 50, cornerRadius: 30, action: {
-                    navigate = true
+                    navigateProfessor = true
                 })
                 .padding()
-                .fullScreenCover(isPresented: $navigate) {
-                    if userChoice.didChooseInscription {
-                        Inscription(hist: hist, mess: mess)
-                    } else {
-                        Connexion(eleveList: EleveList(), hist: hist)
-                    }
+                .fullScreenCover(isPresented: $navigateProfessor) {
+                    Inscription(hist: hist, mess: mess)
                 }
                 CustomButton2(text: "Elève", width: 200, height: 50, cornerRadius: 30, action: {
-                    navigate = true
+                    navigateEleve = true
                 })
                 .padding()
-                .fullScreenCover(isPresented: $navigate) {
-                    if userChoice.didChooseInscription {
-                        Inscription(hist: hist, mess: mess)
-                    } else {
-                        Connexion(eleveList: EleveList(), hist: hist)
-                    }
+                .fullScreenCover(isPresented: $navigateEleve) {
+                    Inscription(hist: hist, mess: mess)
                 }
             }
         }
