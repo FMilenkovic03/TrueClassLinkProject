@@ -46,8 +46,9 @@ class DifficultiesViewModel: ObservableObject {
         
     }
     
-    func validate() -> Bool {
-        
+    @Published var shouldNavigate: Bool = false
+
+   func validate() -> Bool {
         // ici logique de validation
         for difficulties in difficulties {
             for option in difficulties.options {
@@ -57,8 +58,8 @@ class DifficultiesViewModel: ObservableObject {
             }
         }
         
+        shouldNavigate = true
         return true
-        
     }
 }
 
@@ -92,6 +93,8 @@ struct DiagDifficulties: View {
     @StateObject var viewModel = DifficultiesViewModel()
     @State private var selection = 2
     @State private var shouldAnimateButton = false
+    var hist: MessageHistorique
+    var mess: Message
     
     var body: some View {
         NavigationView {
@@ -151,6 +154,25 @@ struct DiagDifficulties: View {
                         }
                         .padding(.top, 20)
                         .offset(x: 0, y: -50)
+                    }
+                     NavigationLink(
+                        destination: MainView(hist: hist, mess: mess),
+                        isActive: $viewModel.shouldNavigate,
+                        label: {
+                            EmptyView()
+                        }
+                    )
+
+                    Button(action: {
+                        viewModel.validate()
+                    }) {
+                        Text("Valider")
+                            .font(.custom("SF Pro", size: 24))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.orangeEdu)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .padding(.top,80)
+                            .padding(30)
                     }
                 }
             }
@@ -260,5 +282,6 @@ struct DiagDifficulties: View {
 }
 
 #Preview {
-    DiagDifficulties()
+    DiagDifficulties(hist: MessageHistorique(), mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: "")
+)
 }

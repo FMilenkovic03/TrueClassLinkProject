@@ -13,6 +13,8 @@ struct DepartNavView: View {
     @State private var shouldAnimateButton = false
     //    @State private var isPressed = false
     //    @State private var isHovered = false
+    var mess: Message
+    var hist: MessageHistorique
     
     var body: some View {
         //        NavigationView {
@@ -36,9 +38,9 @@ struct DepartNavView: View {
                     QuestionListView(viewModel: viewModel, selection: $selection)
                         .tag(0)
                     
-                    DiagExpectations()
+                    DiagExpectations(mess: mess, hist: hist)
                         .tag(1)
-                    DiagDifficulties()
+                    DiagDifficulties(hist: hist, mess: mess)
                         .tag(2)
                     QuestionListView(viewModel: viewModel, selection: $selection)
                         .tag(1)
@@ -66,6 +68,7 @@ struct DepartNavView: View {
 }
 
 #Preview {
-    DepartNavView()
+    DepartNavView(mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: "")
+, hist: MessageHistorique())
 }
 

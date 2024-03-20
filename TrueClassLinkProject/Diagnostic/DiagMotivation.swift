@@ -79,7 +79,8 @@ struct DiagMotivation: View {
     @State private var shouldAnimateButton = false
     //    @State private var isPressed = false
     //    @State private var isHovered = false
-    
+    var mess: Message
+    var hist: MessageHistorique
     var body: some View {
         //        NavigationView {
         ZStack {
@@ -93,12 +94,12 @@ struct DiagMotivation: View {
                 
                 
                 TabView(selection: $selection) {
-                    DepartNavView()
+                    DepartNavView(mess: mess, hist: hist)
                         .tag(0)
                     
-                    DiagExpectations()
+                    DiagExpectations(mess: mess, hist: hist)
                         .tag(1)
-                    DiagDifficulties()
+                    DiagDifficulties(hist: hist, mess: mess)
                         .tag(2)
                     QuestionListView(viewModel: viewModel, selection: $selection)
                         .tag(1)
@@ -241,5 +242,6 @@ struct OptionView: View {
 //        }
 
 #Preview {
-    DiagMotivation()
+    DiagMotivation(mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: "")
+, hist: MessageHistorique())
 }

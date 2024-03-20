@@ -11,7 +11,8 @@ struct DiagDescription: View {
     
     @State private var isPressed = false
     @State private var isHovered = false
-    
+    var hist: MessageHistorique
+    var mess: Message
     
     var body: some View {
         NavigationStack {
@@ -48,16 +49,16 @@ struct DiagDescription: View {
                                         
                                         Text("Si tu veux évaluer tes")
                                             .font(.custom("SFPro-Regular", size: 16))
-                                            .foregroundStyle(.black) +
+                                            .foregroundStyle(.black)
                                         Text(" forces et faiblesses")
                                             .font(.custom("SFPro-Bold", size: 16))
-                                            .foregroundStyle(.orangeEdu) +
+                                            .foregroundStyle(.orangeEdu)
                                         Text(" et mieux comprendre tes")
                                             .font(.custom("SFPro-Regular", size: 16))
-                                            .foregroundStyle(.black) +
+                                            .foregroundStyle(.black)
                                         Text(" motivations")
                                             .font(.custom("SFPro-Bold", size: 16))
-                                            .foregroundStyle(.orangeEdu) +
+                                            .foregroundStyle(.orangeEdu)
                                         Text(", tes compétences, tes besoins éducatifs et tes intérêts, pour faciliter tes choix académiques et professionnels de manière éclairée, alors participe à ce test.")
                                             .font(.custom("SFPro-Regular", size: 16))
                                             .foregroundStyle(.black)
@@ -81,7 +82,7 @@ struct DiagDescription: View {
                             
                         }) {
                             
-                            NavigationLink(destination: DiagMotivation()){
+                            NavigationLink(destination: DiagMotivation(mess: mess, hist: hist)){
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 50.0)
                                         .frame(width: 236, height: 60)
@@ -107,6 +108,7 @@ struct DiagDescription: View {
     }
 }
 #Preview {
-    DiagDescription()
+    DiagDescription(hist: MessageHistorique(), mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: "")
+    )
 }
 

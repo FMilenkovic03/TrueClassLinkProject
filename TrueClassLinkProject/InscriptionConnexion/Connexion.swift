@@ -51,7 +51,7 @@ struct Connexion: View {
                         }
                         .padding()
                         .navigationDestination(isPresented: $navigate, destination: {
-                            MainView(hist: hist, message: mess)})
+                            MainView(hist: hist, mess: mess)})
                         
                     }
                     Spacer()

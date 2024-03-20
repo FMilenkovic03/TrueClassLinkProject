@@ -102,6 +102,8 @@ struct DiagExpectations: View {
     @StateObject var viewModel = ExpectationsViewModel()
     @State private var selection = 1
     @State private var shouldAnimateButton = false
+    var mess: Message
+    var hist: MessageHistorique
     
     var body: some View {
         NavigationView {
@@ -126,9 +128,9 @@ struct DiagExpectations: View {
                             QuestionListView(viewModel: viewModel, selection: $selection)
                                 .tag(1)
                             
-                            DiagExpectations()
+                            DiagExpectations(mess: mess, hist: hist)
                                 .tag(1)
-                            DiagDifficulties()
+                            DiagDifficulties(hist: hist, mess: mess)
                                 .tag(2)
                             QuestionListView(viewModel: viewModel, selection: $selection)
                                 .tag(1)
@@ -269,5 +271,6 @@ struct DiagExpectations: View {
 }
 
 #Preview {
-    DiagExpectations()
+    DiagExpectations(mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: "")
+                     , hist: MessageHistorique())
 }

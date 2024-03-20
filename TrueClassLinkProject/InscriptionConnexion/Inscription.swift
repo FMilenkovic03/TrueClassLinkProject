@@ -131,7 +131,7 @@ struct Inscription: View {
             .navigationBarHidden(navigateToConnexion) // Masquer la barre de navigation si nous naviguons vers la page de connexion
             .background(
                 NavigationLink(
-                    destination: DiagDescription(), // Remplacez Connexion par DiagDescription
+                    destination: DiagDescription(hist: hist, mess: mess), // Remplacez Connexion par DiagDescription
                     isActive: $navigateToDiagDescription,
                     label: {
                         EmptyView()

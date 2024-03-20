@@ -9,14 +9,14 @@ import SwiftUI
 
 struct MainView: View {
     var hist: MessageHistorique
-    var message: Message
+    var mess: Message
     var body: some View {
         TabView {
             CourseChoice(hist: hist)
                 .tabItem {
                     Label("Menu", systemImage: "list.bullet.clipboard.fill")
                 }
-            QuestionClass(message: message, hist: hist)
+            QuestionClass(message: mess, hist: hist)
                 .tabItem {
                     Label("Question", systemImage: "questionmark.bubble.fill")
                 }
@@ -35,5 +35,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView(hist: MessageHistorique(), message: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""))
+    MainView(hist: MessageHistorique(), mess: Message(auteur: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), destinaire: User(email: "", mdp: "", name: "", surname: "", mood: Mood(moodIcon: ""), enCeMoment: EnCeMoment(myMusic: "", myPride: "", myChallenge: "")), typeQuestion: .poserQuest, message: ""))
 }
