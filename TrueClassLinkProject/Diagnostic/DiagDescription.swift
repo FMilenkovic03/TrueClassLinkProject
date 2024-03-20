@@ -47,28 +47,13 @@ struct DiagDescription: View {
                                             .foregroundStyle(.orangeEdu)
                                         Spacer().frame(height:20)
                                         
-                                        Text("Si tu veux évaluer tes")
-                                            .font(.custom("SFPro-Regular", size: 16))
-                                            .foregroundStyle(.black)
-                                        Text(" forces et faiblesses")
-                                            .font(.custom("SFPro-Bold", size: 16))
-                                            .foregroundStyle(.orangeEdu)
-                                        Text(" et mieux comprendre tes")
-                                            .font(.custom("SFPro-Regular", size: 16))
-                                            .foregroundStyle(.black)
-                                        Text(" motivations")
-                                            .font(.custom("SFPro-Bold", size: 16))
-                                            .foregroundStyle(.orangeEdu)
-                                        Text(", tes compétences, tes besoins éducatifs et tes intérêts, pour faciliter tes choix académiques et professionnels de manière éclairée, alors participe à ce test.")
-                                            .font(.custom("SFPro-Regular", size: 16))
-                                            .foregroundStyle(.black)
-                                        
-                                        Text("C’est simple, réponds aux questions dans différentes rubriques, tu peux cocher plusieurs réponses à une question. N’oublie pas de valider tes choix pour changer de rubrique.")
-                                            .font(.custom("SFPro-Regular", size: 16))
-                                            .foregroundStyle(.black)
-                                        Text("Alors maximise ta réussite car ce Diag te permettra d’avoir une vision complète de tes compétences et de bénéficier d’un soutien personnalisé !")
-                                            .font(.custom("SFPro-Regular", size: 16))
-                                            .foregroundStyle(.black)
+                                        Text("""
+    Si tu veux évaluer tes forces et faiblesses et mieux comprendre tes motivations, tes compétences, tes besoins éducatifs et tes intérêts, pour faciliter tes choix académiques et professionnels de manière éclairée, alors participe à ce test.
+    C’est simple, réponds aux questions dans différentes rubriques, tu peux cocher plusieurs réponses à une question. N’oublie pas de valider tes choix pour changer de rubrique.
+    Alors maximise ta réussite car ce Diag te permettra d’avoir une vision complète de tes compétences et de bénéficier d’un soutien personnalisé !
+    """)
+                                        .font(.custom("SFPro-Regular", size: 16))
+                                        .foregroundStyle(.black)
                                     }
                                     .padding()
                                 }
